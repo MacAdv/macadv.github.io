@@ -175,6 +175,11 @@ clear: both;
 }
 
 
+.container-kanban{
+  height: calc(100vh - 7.1875rem);
+  display: flex;
+  flex-direction: column;
+}
 
 .kanban-board {
     flex: 1;
@@ -188,42 +193,7 @@ clear: both;
 }
 
 
-
-.container-kanban{
-  height: calc(100vh - 7.1875rem);
-  display: flex;
-  flex-direction: column;
-}
-
-@include media-breakpoint-up(lg) {
-  .container-kanban{
-    .container-fluid{
-      padding-left: $spacer*2;
-      padding-right: $spacer*2;
-    }
-  }
-  .layout-nav-side{
-    .container-kanban{
-      height: calc(100vh - 3.5625rem);
-    }
-  }
-}
-
-.kanban-board{
-  flex: 1;
-  white-space: nowrap;
-  overflow-x: scroll;
-  display: flex;
-  user-select: none;
-  > .kanban-col{
-    user-select: none;
-    flex: 1 0 auto;
-    width: calc(100vw - 24px);
-    max-height: 100%;
-    padding-right: $spacer/2;
-    padding-bottom: $spacer/2;
-    outline: none !important;
-    .card-list{
+  .kanban-col .card-list{
       user-select: none;
       max-height: 100%;
       overflow: hidden;
@@ -231,33 +201,27 @@ clear: both;
       flex-direction: column;
       justify-content: space-around;
     }
-    .card-list-body{
+.kanban-col .card-list-body{
       min-height: 1rem;
     }
-    .card-list-header{
+
+.kanban-col    .card-list-header{
       display: block;
       position: relative;
-      .dropdown{
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-    }
-    .card-list-body{
-      user-select: none;
-      overflow-y: scroll;
-      @extend .no-scroll-bars;
-    }
-    .card-list-footer{
-      padding-top: $spacer/2;
-      .btn-link{
-        padding: 0;
-      }
-    }
-  }
-  &:focus{
-    outline: none;
-  }
+}
+.kanban-col    .card-list-header      .dropdown{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.kanban-col    .card-list-body{
+    user-select: none;
+    overflow-y: scroll;
+    @extend .no-scroll-bars;
+}
+
+.kanban-col    .card-list-footer{
+    padding-top: 0.5em;
 }
 
 @media (min-width: 576px){
