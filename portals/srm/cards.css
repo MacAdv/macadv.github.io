@@ -28,10 +28,10 @@
 
 
 .card{
-  background-color: white;
-  border-radius: 10px;
+  background: white;
+  border-radius: 6px;
   margin-bottom: 5px;
-  box-shadow: 1px lightgray;
+  padding: 10px;
   }
   
   
