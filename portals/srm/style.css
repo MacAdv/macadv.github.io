@@ -42,6 +42,9 @@ clear: both;
 }
 
 
+
+
+
 .card {
     margin-bottom: 1.5rem;
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .025)
@@ -170,3 +173,118 @@ clear: both;
     flex: 0 0 25%;
     max-width: 25%;
 }
+
+
+
+.kanban-board {
+    flex: 1;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+// 
+// 
+// kanban.scss
+//
+//
+
+.container-kanban{
+  height: calc(100vh - 7.1875rem);
+  display: flex;
+  flex-direction: column;
+}
+
+@include media-breakpoint-up(lg) {
+  .container-kanban{
+    .container-fluid{
+      padding-left: $spacer*2;
+      padding-right: $spacer*2;
+    }
+  }
+  .layout-nav-side{
+    .container-kanban{
+      height: calc(100vh - 3.5625rem);
+    }
+  }
+}
+
+.kanban-board{
+  flex: 1;
+  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  user-select: none;
+  > .kanban-col{
+    user-select: none;
+    flex: 1 0 auto;
+    width: calc(100vw - 24px);
+    max-height: 100%;
+    padding-right: $spacer/2;
+    padding-bottom: $spacer/2;
+    outline: none !important;
+    .card-list{
+      user-select: none;
+      max-height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .card-list-body{
+      min-height: 1rem;
+    }
+    .card-list-header{
+      display: block;
+      position: relative;
+      .dropdown{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+    .card-list-body{
+      user-select: none;
+      overflow-y: scroll;
+      @extend .no-scroll-bars;
+    }
+    .card-list-footer{
+      padding-top: $spacer/2;
+      .btn-link{
+        padding: 0;
+      }
+    }
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .kanban-board{
+    > .kanban-col{
+      max-width: $spacer*13;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container-kanban{
+    .page-header{
+      h1{
+        font-size: $h4-font-size;
+        margin: 0;
+      }
+      > div:last-child{
+        display: none !important;
+      }
+    }
+  }
+}
+
+
