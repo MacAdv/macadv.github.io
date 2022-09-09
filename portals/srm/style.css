@@ -265,26 +265,23 @@ clear: both;
   }
 }
 
-@include media-breakpoint-up(sm) {
-  .kanban-board{
-    > .kanban-col{
-      max-width: $spacer*13;
+@media (min-width: 576px){
+
+    .kanban-board > .kanban-col {
+        max-width: 19.5rem;
     }
-  }
+    
 }
 
-@include media-breakpoint-down(sm) {
-  .container-kanban{
-    .page-header{
-      h1{
-        font-size: $h4-font-size;
-        margin: 0;
-      }
-      > div:last-child{
-        display: none !important;
-      }
-    }
-  }
+.kanban-board > .kanban-col {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex: 1 0 auto;
+    width: calc(100vw - 24px);
+    max-height: 100%;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    outline: none !important;
 }
-
-
