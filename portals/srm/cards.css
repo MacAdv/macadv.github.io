@@ -5,14 +5,38 @@
 //  -- https://pipeline.mediumra.re/nav-top-kanban-board.html
  */
 
+
+   /** Card List **/
+  
+   .card-list{
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 1rem;
+    background: lightgray;
+    background-color: lightgrey;
+    padding: 12px;
+    border-radius: 10px;
+}
+  .card-list-head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-list:last-child{
+    margin-bottom: 0;
+  }
+
+
+
 .card{
+  background-color: white;
+  border-radius: 10px;
   margin-bottom: 5px;
   box-shadow: 1px lightgray;
   }
   
   
 .card-title {
-  font-size: 1.25 em;
+  font-size: 1.25em;
   font-weight: bold;
   max-width: 90%;
 }
@@ -48,6 +72,7 @@
       position: relative;
       top: 0;
       right: 0;
+      display: none;
     }
   
   /** Card Progress Bars **/
@@ -81,21 +106,3 @@
       margin-right: 10px;
     }
 
-  /** Card List **/
-  
-  .card-list{
-    margin-bottom: 5px;
-    border-radius: 10px;
-    padding: 1rem;
-    background: lightgray;
-    background-color: lightgrey;
-    padding: 12px;
-    border-radius: 10px;
-}
-  .card-list-head{
-    display: flex;
-    justify-content: space-between;
-  }
-  .card-list:last-child{
-    margin-bottom: 0;
-  }
