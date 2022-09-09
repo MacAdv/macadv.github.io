@@ -6,33 +6,53 @@
  */
 
 .card{
-    box-shadow: 1px lightgray;
+  margin-bottom: 5px;
+  box-shadow: 1px lightgray;
   }
   
   
-  .card-title h6{
-      margin: 0;
-    }
+.card-title {
+  font-size: 1.25 em;
+  font-weight: bold;
+  max-width: 90%;
+}
+.card-header{
+  padding-top: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border-bottom: none;
+}
+
+
+.card-body {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
   
   .card-body p:last-child{
       margin-bottom: 0;
     }
   
-  .card.card{
-      background: $gray-100;
-    }
-  
   /** Card Options **/
   
-  .card-body .card-options{
-      position: absolute;
-      top: 5px;
-      right: 2px;
+.card-options{
+      margin-left: 10px;
+      position: relative;
+      top: 0;
+      right: 0;
     }
   
   /** Card Progress Bars **/
   
-  .card .progress{
+.card .progress{
       height: 0.1875rem;
       background: none;
       position: absolute;
@@ -48,54 +68,14 @@
   
   /** Custom Cards **/
   
-  .card{
-    margin-bottom: 5px;
-  }
-
-  .card-title{
-    max-width: 90%;
-  }
-  
   .card-note{
     background: lighten(yellow,42%);
     border-color: lighten(yellow,38%);
   }
-    .card-header{
-      padding-top: 1rem;
-      padding-bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: none;
-      border-bottom: none;
-    }
+
     .avatar{
       margin-right: 20px;
       border-color: lighten(yellow,40%);
-    }
-    .card-body{
-      padding-top: 1rem;
-    }
-  
-  .card-task    .card-body{
-      padding: 1.25rem;
-    }
-  
-  .card-task .card-title{
-      margin: 0;
-    }
-    .card-body, .card-meta{
-      display: flex;
-      align-items: center;
-    }
-    .card-body{
-      justify-content: space-between;
-    }
-    .card-options{
-      margin-left: 10px;
-      position: relative;
-      top: 0;
-      right: 0;
     }
     .avatars{
       margin-right: 10px;
@@ -112,13 +92,10 @@
     padding: 12px;
     border-radius: 10px;
 }
-  .card{
-    border: none;
-  }
   .card-list-head{
     display: flex;
     justify-content: space-between;
   }
-  .card:last-child{
+  .card-list:last-child{
     margin-bottom: 0;
   }
