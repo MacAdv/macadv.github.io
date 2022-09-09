@@ -1,0 +1,121 @@
+/* // 
+// 
+// cards.scss
+//
+//  -- https://pipeline.mediumra.re/nav-top-kanban-board.html
+ */
+
+.card{
+    box-shadow: 1px lightgray;
+  }
+  
+  
+  .card-title h6{
+      margin: 0;
+    }
+  
+  .card-body p:last-child{
+      margin-bottom: 0;
+    }
+  
+  .card.card{
+      background: $gray-100;
+    }
+  
+  /** Card Options **/
+  
+  .card-body .card-options{
+      position: absolute;
+      top: 5px;
+      right: 2px;
+    }
+  
+  /** Card Progress Bars **/
+  
+  .card .progress{
+      height: 0.1875rem;
+      background: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+  }
+  .progress-bar{
+        height: 1rem;
+        border-radius: .5rem 0 0 0;
+  }
+  
+  /** Custom Cards **/
+  
+  .card{
+    margin-bottom: 5px;
+  }
+
+  .card-title{
+    max-width: 90%;
+  }
+  
+  .card-note{
+    background: lighten(yellow,42%);
+    border-color: lighten(yellow,38%);
+  }
+    .card-header{
+      padding-top: 1rem;
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      border-bottom: none;
+    }
+    .avatar{
+      margin-right: 20px;
+      border-color: lighten(yellow,40%);
+    }
+    .card-body{
+      padding-top: 1rem;
+    }
+  
+  .card-task    .card-body{
+      padding: 1.25rem;
+    }
+  
+  .card-task .card-title{
+      margin: 0;
+    }
+    .card-body, .card-meta{
+      display: flex;
+      align-items: center;
+    }
+    .card-body{
+      justify-content: space-between;
+    }
+    .card-options{
+      margin-left: 10px;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+    .avatars{
+      margin-right: 10px;
+    }
+
+  /** Card List **/
+  
+  .card-list{
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 1rem;
+    background: lightgray;
+  }
+  .card{
+    border: none;
+  }
+  .card-list-head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .card:last-child{
+    margin-bottom: 0;
+  }
