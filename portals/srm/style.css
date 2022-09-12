@@ -75,14 +75,14 @@ clear: both;
 }
 
 
-  .kanban-col .card-list{
-      user-select: none;
-      max-height: 100%;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
+.kanban-col .card-list{
+    user-select: none;
+    max-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .kanban-col .card-list-body{
       min-height: 1rem;
     }
@@ -124,4 +124,15 @@ clear: both;
     padding-right: 0.75rem;
     padding-bottom: 0.75rem;
     outline: none !important;
+}
+
+
+
+/* AVATARS */
+
+.avatars > li + li {
+    margin-left: -0.75rem;
+}
+.avatars > li {
+    display: inline-block;
 }
