@@ -128,11 +128,3 @@ clear: both;
 
 
 
-/* AVATARS */
-
-.avatars > li + li {
-    margin-left: -0.75rem;
-}
-.avatars > li {
-    display: inline-block;
-}
