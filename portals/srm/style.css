@@ -88,13 +88,21 @@ clear: both;
     }
 
 .kanban-col    .card-list-header{
-      display: block;
-      position: relative;
+    display: block;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    padding: 8px;
+    background: beige;
+    margin: 3px;
+    border-radius: 25px;
+    text-align: center;
 }
 .kanban-col    .card-list-header      .dropdown{
     position: absolute;
     right: 0;
     top: 0;
+    display: none;
 }
 .kanban-col    .card-list-body{
     user-select: none;
@@ -136,15 +144,12 @@ clear: both;
     margin: 0;
 }
 
-.avatars > li + li {
-    margin-left: -0.75rem;
-}
 .avatars > li {
     display: inline-block;
 }
 
 .avatars > li + li {
-    margin-left: -0.75rem;
+    margin-left: -2rem;
 }
 .card-kanban .avatars {
     margin-bottom: 0.75rem;
