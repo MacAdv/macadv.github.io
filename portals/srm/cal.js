@@ -1,4 +1,6 @@
-document.getElementById("app").innerHTML = `
+$(function() {
+    
+    document.getElementById("app").innerHTML = `
 <!-- Parent container for the calendar month -->
 <div class="calendar-month">
   <!-- The calendar header -->
@@ -46,3 +48,6 @@ document.getElementById("app").innerHTML = `
   </ol>
 </div>
 `;
+
+
+});
