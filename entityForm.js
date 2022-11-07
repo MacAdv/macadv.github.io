@@ -18,8 +18,42 @@ $('div[data-export]').each(function(){
 console.log(fields)
 
 var entguid = $('[data-export="entguid"] input').val()
+var personguid = $('[data-export="sys:id"] input').val()
+
 $('[data-export="sys:entity:id:'+entity+'"] input').val(entguid)
 console.log('entguid; ', entguid)
+
+if(entguid + personguid){
+    $('div.action').append('<button id="entDeleteButton" onclick="deleteEntity">Delete</button><img id="imgDelete />')
+}
+
+
+function deleteEntity() {
+    if(confirm('Really DELETE this record?')){
+        $.ajax({
+            url: "/portal/ux?cmd=db_delete_entity",
+            method: "POST",
+            data: {
+                cmd: 'db_delete_entity',
+                entguid: entguid,
+                record: personguid, 
+            } ,
+            beforeSend: function(){
+               $('#imgDelete').attr("src","https://engage.macalester.edu/www/images/portal-elements/spinner-kit.gif");
+            }, 
+            success: function (result) {
+                console.log(field+': '+result)
+                $('#imgDelete').attr("src","");
+                history.go(-1);
+            }, 
+            error: function () {
+                console.log("error");
+            }
+        });
+              
+    }
+    
+}
 
 
 /**
