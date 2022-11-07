@@ -18,7 +18,7 @@ $('div[data-export]').each(function(){
 console.log(fields)
 
 var entguid = $('[data-export="entguid"] input').val()
-var personguid = $('[data-export="sys:id"] input').val()
+var personguid = $('[data-export="person"] input').val()
 
 $('[data-export="sys:entity:id:'+entity+'"] input').val(entguid)
 console.log('entguid; ', entguid)
@@ -40,7 +40,6 @@ if(entguid + personguid){
                    $('#imgDelete').attr("src","https://engage.macalester.edu/www/images/portal-elements/spinner-kit.gif");
                 }, 
                 success: function (result) {
-                    console.log(field+': '+result)
                     $('#imgDelete').attr("src","");
                     history.go(-1);
                 }, 
