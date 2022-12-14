@@ -98,6 +98,7 @@ clear: both;
     border-radius: 25px;
     text-align: center;
 }
+
 .kanban-col    .card-list-header      .dropdown{
     position: absolute;
     right: 0;
@@ -167,4 +168,9 @@ clear: both;
     border: 2px solid #f8f9fa;
     background: #f8f9fa;
     color: #fff;
+}
+
+
+.tablegroup-group{
+        padding: 1rem;
 }
