@@ -23,8 +23,8 @@ var personguid = $('[data-export="person"] input').val()
 $('[data-export="sys:entity:id:'+entity+'"] input').val(entguid)
 console.log('entguid; ', entguid)
 
-if(!(!entguid || !personguid)){
-    $('div.action').append('<button id="entDeleteButton">Delete</button><img id="imgDelete />')
+if(entguid && personguid){
+    $('div.action').append('<button id="entDeleteButton">Delete</button><img id="imgDelete"/>')
 
     $('#entDeleteButton').click(function () {
         if(confirm('Really DELETE this record?')){
@@ -38,12 +38,14 @@ if(!(!entguid || !personguid)){
                 } ,
                 beforeSend: function(){
                    $('#imgDelete').attr("src","https://engage.macalester.edu/www/images/portal-elements/spinner-kit.gif");
+                //    $('#img--'+field).attr("src","https://lloydlentz.github.io/slate-tips/ux/entityForm/loading-blue-bounce-20h.gif");
                 }, 
                 success: function (result) {
                     $('#imgDelete').attr("src","");
                     history.go(-1);
                 }, 
                 error: function () {
+                    alert("ERROR: It's possible you did not setup the delete method correctly.  Have your Slate Admin go check Lloyd's writup again. 😻")
                     console.log("error");
                 }
             });
@@ -57,7 +59,7 @@ if(!(!entguid || !personguid)){
 /**
  * Assumes you use 
  */
- if(!(!entguid || !personguid)){  // Check to make sure there are person and ent fields before filling in data 
+if(entguid && personguid){  // Check to make sure there are person and ent fields before filling in data 
     fields.forEach(function (field) {
         $.ajax({
             url: "/portal/ux",
@@ -91,7 +93,6 @@ if(!(!entguid || !personguid)){
             error: function () {
                 console.log("error");
             }
-        });
-        
+        });        
     })
 }
