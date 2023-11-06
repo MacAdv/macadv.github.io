@@ -78,6 +78,20 @@ a.button {
     color: #808080;
 }
 
+.tile .row {
+    display: flex;
+}
+
+.tile .row .label {
+    float: left;
+    min-width: 100px;
+    border: solid;
+}
+
+.tile .row .data{
+    float: left;
+
+}
 
 /* GENERAL */
     
