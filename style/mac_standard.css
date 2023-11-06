@@ -44,7 +44,8 @@ a.button {
 
 /* TILES */
 .tile-container{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     clear: both;
  }
     
@@ -59,6 +60,10 @@ a.button {
     float: left;
     margin: 5px;
     }
+
+.tile-med{
+    width: 400px !important;
+}
     
 .tile > div {display: block;}
         
@@ -80,12 +85,13 @@ a.button {
 
 .tile .row {
     display: flex;
+    align-items: center;
 }
 
 .tile .row .label {
     float: left;
     min-width: 100px;
-    border: solid;
+    text-align: left;
 }
 
 .tile .row .data{
