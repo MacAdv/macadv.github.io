@@ -1,3 +1,49 @@
+body { 
+    font-smoothing: antialiased; 
+    -webkit-font-smoothing: antialiased; 
+    -ms-font-smoothing: antialiased; 
+    -moz-font-smoothing: antialiased; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
+    font-family: NewslabLight, georgia, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;     
+    font-size: 1rem; 
+    line-height: 1.75rem; 
+}
+h1{
+	font-size: 3rem;
+}
+
+h2, h3, h4.cr { 
+    line-height: 1.25; 
+    font-family: NewslabMedium, georgia, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; 
+    margin: 0px 0px 1.5rem; 
+    text-rendering: optimizelegibility; 
+}
+h2, h3 { 
+    font-weight: 300; 
+}
+h4.cr { 
+    font-weight: 500; 
+}
+h2 { font-size: 1.9rem; }
+@media screen and (min-width: 74em) { 
+	h1 { font-size: 4rem;}
+	h2 { font-size: 2.5rem; } 
+}
+h3 { font-size: 1.75rem; }
+h4.cr { font-size: 1.5rem; }
+p.cr, ul.cr { padding: 0px; margin: 0px 0px 1.5rem; }
+li.cr { margin: 0px 0px 0.75rem; }
+a, a:link, a:visited { 
+    transition: color 0.15s ease 0s, background-color 0.15s ease 0s; 
+    color: rgb(1, 66, 106); 
+    text-decoration: underline; 
+}
+a:focus, a:hover, a:hover::after { 
+    color: rgb(212, 68, 32); 
+}
+
+
 /* Button Markup */
 .button {
     display: block;
