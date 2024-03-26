@@ -1,18 +1,33 @@
 body {
-      font-family: 'Tahoma', sans-serif, arial;
-      }
-     .button1 {
-       background: #01426A;
-       color: #fff;
-       font-weight: bold;
-       text-align: center;
-       border-radius: 10px;
-       padding: 8px;
-       width: 190px;
-       transition: 0.4s;
-      }
-     .button1:hover {
-       background-color: #71C5E8;
-       color: #fff;
-       cursor: pointer;
-     }
+  font-family: 'Tahoma', sans-serif, arial;
+}
+.button1 {
+  background: #01426A;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 8px;
+  width: 190px;
+  transition: 0.4s;
+}
+.button1:hover {
+  background-color: #71C5E8;
+  color: #fff;
+  cursor: pointer;
+}
+.button2 {
+  background: #71C5E8;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 190px;
+  transition: 0.4s;
+}
+.button2:hover {
+  background-color: #EF4F26;
+  color: #fff;
+  cursor: pointer;
+}
