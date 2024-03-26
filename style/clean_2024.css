@@ -1,6 +1,8 @@
 body {
   font-family: 'Tahoma', sans-serif, arial;
-}
+ }
+
+/* BUTTONS */
 .button1 {
   background: #01426A;
   color: #fff;
@@ -10,12 +12,12 @@ body {
   padding: 8px;
   width: 190px;
   transition: 0.4s;
-}
+ }
 .button1:hover {
   background-color: #71C5E8;
   color: #fff;
   cursor: pointer;
-}
+ }
 .button2 {
   background: #71C5E8;
   color: #fff;
@@ -25,9 +27,108 @@ body {
   padding: 8px;
   max-width: 190px;
   transition: 0.4s;
-}
+ }
 .button2:hover {
   background-color: #EF4F26;
   color: #fff;
   cursor: pointer;
-}
+ }
+.button3 {
+  background: #D44420;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 8px;
+  max-width: 190px;
+  transition: 0.4s;
+ }
+.button3:hover {
+  background-color: #5B6770;
+  color: #fff;
+  cursor: pointer;
+ }
+
+ /* INFO TILE CONTAINER */
+ .info-tile-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 8px;
+  box-sizing: border-box;
+ }
+.info-tile {
+  border: 1px solid #A2AAAD;
+  border-radius: 5px;
+  padding: 0 25px 5px 25px;
+  margin: 3px;
+  width: 300px;
+ }
+.info-tile-header {
+  color: #5B6770;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+ }
+.tile-row {
+  clear: both;
+  margin: 0 10px 0 -17px;
+ }
+.tile-label {
+ color: #01426A;
+ font-weight: normal;
+ text-transform: capitalize;
+ }
+.tile-data {
+  color: #EF4F26;
+  font-weight: bold;
+  text-transform: capitalize;
+ }
+.info-tile .tile-label, .info-tile .tile-data{
+  float: left;
+  margin: 9px 5px 0 0;
+  min-width: 45px;
+  display: inline-table;
+ }
+.info-tile-footer {
+  clear: both;
+  color: #5B6770;
+  font-style: italic;
+  text-align: left;
+  font-size: 11px;
+  width: 100%;
+  margin-left: -10px;
+  padding-top: 7px;
+ }
+
+  /* STAT TILE CONTAINER */
+.stat-tile-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;      
+ }
+.stat-tile-container>* {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 175px;
+ }
+.stat-tile {
+  border: 1px solid #A2AAAD;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+ }
+.tile-label {
+  color: #01426A;
+  font-weight: normal;
+  text-transform: capitalize;
+ }
+.tile-data {
+  color: #EF4F26;
+  font-weight: bold;
+  text-transform: capitalize;
+ }
