@@ -132,3 +132,22 @@ body {
   font-weight: bold;
   text-transform: capitalize;
  }
+
+  /* MAC COLOR TILES */
+.stat-tile.macblue { background-color: #01426A; }
+.stat-tile.macorange { background-color: #D44420; }
+.stat-tile.ltgray { background-color: #A5ADAF; }
+.stat-tile.dkgray { background-color: #5B6770; }
+.stat-tile.white { background-color: #ffffff; }
+.stat-tile.black { background-color: #000000; }
+.stat-tile.skyblue { background-color: #71C5E8; }
+.stat-tile.gold { background-color: #FFB500; }
+.stat-tile.green { background-color: #658D1B; }
+.stat-tile.plum { background-color: #8A1B61; }
+.stat-tile.red { background-color: #C8102E; }
+
+.tile-label.white {
+  color: #fff;
+  font-weight: normal;
+  text-transform: capitalize;
+ }
