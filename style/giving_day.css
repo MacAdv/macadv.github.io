@@ -1,0 +1,271 @@
+/* the main headline styles */
+#content .headline h1 {font-size: 35px; text-align: center; padding-bottom: 15px; color: #555;}
+#content .overview h2 {font-size: 24px; color: #555;}
+#content .overview h3 {font-size: 16px; color:#555; font-style:italic;}
+#content .donors h2 {font-size: 20px; color: #00669e; border-bottom: solid 1px #00669e26; margin-bottom: 10px;}
+#content .funds h2 {font-size: 16px; color: #555; white-space: nowrap;}
+
+#page * {box-sizing: border-box;}
+
+/* menu tabs styles ... */
+#content #menuTabsWrapper {width:100%; max-width: 100%; margin: 0 auto;}
+#content ul.menuTabs {list-style: none; margin: 1em 0 0; padding: 0; width: 100%; display:flex; flex-wrap: wrap;}
+#content ul.menuTabs li {display: inline-block; vertical-align:bottom; margin: 0 0 -1px; padding: 0; flex: 25% 1 1;}
+#content ul.menuTabs li.fullWidth {display: inline-block; margin: 0; padding: 0; width:100%;}
+#content ul.menuTabs li.fullWidth a {display: block; margin: 3px; text-align:center;}
+#content ul.menuTabs li a {height: auto; font-size: 18px; color: #555 !important; border-radius: 5px; display: block; font-weight: bold; margin: 3px 3px 3px 0px; padding: 11px 5px; text-decoration: none; text-align:center; line-height:28px; background:#f1f1f1; white-space: nowrap;} 
+#content ul.menuTabs li a.active, #content ul.menuTabs li a:hover {background-color: #fff; color: #00669e !important; border: 1px solid #00669e; border-radius: 5px 5px 0 0;}
+#content ul.menuTabs li a[data-tab='Funds'].active, #content ul.menuTabs li a[data-tab='Funds']:hover	{margin-right: 0px;}
+#content_body {background: white; padding: 15px 10px 5px; box-shadow: 0 0 9px rgba(53,61,72,0.25); max-width: 100%; margin: -3px auto 0;}
+@media only screen and (min-width: 615px) {
+	/* setting the background for the tabbed section */
+	#page {background: linear-gradient(180deg, #fff 972px, #f1f1f1 0);}	
+	div.part.giving-tabs {background: #f1f1f1;}
+	/* fading side border colors */
+	.wrap-content-body {background: linear-gradient(180deg, #00669e 30%, transparent 60%); padding: 0 1px; border-radius: 4px;}
+	#content_body {border-top: 1px solid #00669e;}
+	#content ul.menuTabs li a.active, #content ul.menuTabs li a:hover {border-bottom: 1px solid #fff;}
+}
+
+/* the overview/main container and its elements */
+div.part.overview {box-shadow: 0 0 9px rgba(53,61,72,0.25); border-radius: 9px; padding: 20px 15px;}
+div.part.overview div#wrapper {display: flex; flex-wrap: wrap;}
+div#wrapper > div {flex: auto;}
+div#wrapper > div.fullWidth {flex-basis: 100%;}
+div#wrapper > div.centered {text-align: center;}
+div#wrapper > div#video {flex: 0 1 60%; align-self: center;}
+div#wrapper > div#aside {flex: 0 1 35%; padding: 5px; align-self: center;}
+/* mobile adjustments */
+@media only screen and (max-width: 615px) {
+	div#wrapper > div {flex-basis: 100% !important;}
+	#content ul.menuTabs li {flex-basis: 50% !important;}
+}
+
+.grey-progress-bar {color: #000!important; background-color: #f1f1f1; margin-top: 16px!important; margin-bottom: 16px!important;}
+.green-progress-bar {color: #fff!important; background-color: green; padding: 12px 0px!important; max-width: 100%;}
+.green-progress-label {margin: 0 auto; width: 90%; text-align: center;}
+.ofGoalText {font-size: 12px; font-weight:bold; color: #555; padding-bottom: 15px;}
+
+/* main Give Now button */
+.give-button {width: 50%; background-color: #00669e; color: white !important; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 5px; font-size: 25px; display: inline-block; text-align: center; text-decoration: none;}
+.give-button:hover {background-color: #80d2ff!important;}
+.fb_iframe_widget {display: block;}
+
+/* The tabs area ... */
+div.part.giving-tabs {padding: 10px 0px; margin-bottom: 0px;}
+/* the content of the various tabs */
+/* About and Updates */
+div.part.about-tab, div.part.updates-tab {background-color: #fff; padding: 30px; font-size: 14px;}
+/* Fund Goals */
+div.part.funds div.fund-wrapper {display: flex; flex-wrap: wrap;}
+div.fund-wrapper > div {flex: 1 1 225px;}
+div.individual-fund {  
+  margin: 10px 5px;
+  padding: 15px;
+  box-shadow: 0 0 9px rgba(53,61,72,0.15);
+  border-radius: 9px;
+  transition:all 0.5s ease;
+}
+.individual-fund:hover{
+  margin-top:-2px;
+  box-shadow:0 20px 30px 0 rgba(53,61,72,0.15);
+}
+/* buttons on the Fund Goals tab */
+.give-fund-button {width: 100%; background-color: #00669e; color: white !important; padding: 9px 10px; margin: 3px auto; border: none; border-radius: 4px; font-size: 14px; font-weight: bold; display: inline-block; text-align: center; text-decoration: none;}
+.give-fund-button:hover {background-color: #80d2ff !important;}
+
+/* Donors tab */
+div.part.donors:not(.ten-recent) {margin-bottom:5px;}
+div.report_embed div p {font-size: 0.7em !important;}
+span.report_export {display:none;}
+table.report_chart thead th, div.report_row table thead th {display:none;}
+table.report_chart tbody tr td {border:none!important;}
+.report_rows_static tr.header > th {background:#f1f1f1;}
+
+/* pop-up styling */
+.supports-boxshadow .dialog_host .dialog {border-radius: 9px;}
+.dialog .header {background: #f1f1f1; color: #555;}
+.dialog .part.give-now-form {margin-bottom: 0px;}
+.dialog .part.give-now-form div.action {border-top: 1px solid #f9f9f9; padding: 5px 10px;}
+/*
+.leaderboard:link, .leaderboard:visited {background-color: #00669e; color: white; padding: 25px; text-align: center; text-decoration: none; display: inline-block; width: 100%}
+.leaderboard:hover, .leaderboard:active {background-color: green;}
+*/
+
+#content > table.fixed > tbody > tr > td {padding: 0px !important;}
+
+#content {
+    max-width: 1100px;
+	width: 100%;
+    background: #FFF;    
+    margin: 10px auto 0;
+    padding: 5px 0% 0px !important;    
+	box-sizing: border-box;	
+}
+
+/* The actual Giving Form for the giving day portal - embedded form */
+/* the main floating container ... */
+.part.give-now-form {
+    max-width: 775px;
+	width: 100%;
+    background: #FFF;    
+    margin: 0 auto;
+    padding: 65px 5% 15px 5% !important;
+    box-shadow: 0 0 18px rgba(53,61,72,0.25);
+    border-radius: 10px;
+	box-sizing: border-box;	
+}
+
+/* override styles for the main form title (H1) ... */
+form h1 {font-size:2.5em; color: #00669e; text-align: center;}
+
+/* ... and the H2-form elements */
+div.form_h2[data-type=h2] .form_label {
+    font-size: 1.75em;
+    font-weight: bold;
+    font-style: italic;
+    color: green;
+    text-align: left;
+    padding: 20px 0px !important;    
+}
+
+/* styling input fields */
+.form_container input:not([type="checkbox"]):not([type="radio"]), .form_container select, .form_container textarea {
+        font-size: 16px;
+        padding: 9px;
+        margin: 6px 0 4px;
+        border: 1px solid #ccc;        
+        color: #000;
+        font-family: sans-serif;        
+        line-height: normal;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+	
+.form_container select {background-color: #f1f1f1;}
+.form_container input:not([type="checkbox"]):not([type="radio"]), .form_container textarea {width: 100%;}
+.form_container select:not([aria-label="Month"]):not([aria-label="Day"]):not([aria-label="Year"]):not([aria-label^="Recurring"]) {width: 100%;}    
+.form_container textarea {min-height: 100px; resize: vertical;}
+.form_container input:focus, .form_container select:focus, .form_container textarea:focus {background: #f9f9f9 !important;}
+.form_container fieldset .form_response {padding: 2px 0;}
+    		
+/* the submit button */
+form button.default {
+  width: 99%;
+  background-color: #00669e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+/* hover and focus for the submit button */
+form button.default:hover, form button.default:focus {background-color: #80d2ff !important;}
+
+/* form labels */
+.form_container .form_label {font-size: 16px; font-weight: bold; color: #555;}
+.form_question.form_payment > label {padding-top: 15px !important;}
+.form_container div.form_question:not(.form_payment):not(.form_h2):not(.form_p) .form_label, .form_container div.form_question:not(.form_payment):not(.form_h2):not(.form_p) label {vertical-align: middle !important;}
+/* inside the payment widget */
+#payment_form th, label[for='recurring'], #recurring_questions tr > td:first-child {font-weight: bold; color: #555;}
+#payment_form table.plain col:first-of-type {width: 175px !important;}
+#payment_form table.plain #displayAmount {font-size: 16px; color: #555;}
+div#card-location {padding: 9px; margin: 6px 0 4px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 3px;}
+/* the calendar */
+.ui-datepicker {width: 100% !important;}
+.ui-datepicker-header {font-size: 14px; border-radius: 3px;}
+
+/* replicate block links ... */
+a:link.replicate_insert {color: #00669e; text-decoration: underline; font-size: 14px; font-weight: bold; padding-left: 8px;}
+a:hover.replicate_insert, a:hover.replicate_delete {color: #72a130 !important;}
+.replicate_destination tr.column > th a:link {color: #00669e; text-decoration: underline;}
+/* ... and headers */
+.replicate_destination tr.column {font-weight: bold; color: #555; padding: 4px 5px !important; background-color: #fff; border-bottom: 1px solid #f3f3f3;}
+.replicate_destination tr.column th {background-color: #fff;}
+.replicate_insert_container td {padding: 8px 0 !important;}
+
+@media only screen and (max-width: 736px) {
+	.replicate_destination tr.column {display: grid;}
+	#payment_form th, #recurring_questions tr > td:first-child {background-color: #f3f3f3;}
+}
+
+/* styling for the modal functionality */
+#myBtn {margin-left: 150px; border-radius: 2px;}
+@media only screen and (max-width: 480px) {	#myBtn {margin-left: 0px;} }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Some modal header and body overrides */
+.modal-header {
+  padding: 7px 16px;
+  background-color: #00669e;  
+}
+.modal-header h2 {margin: 2px 0px; color: white;}
+.modal-body {padding: 12px 16px 50px; }
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+
