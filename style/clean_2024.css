@@ -4,8 +4,8 @@ body {
 
 /* BUTTONS */
 .button1 {
-  background: #01426A;
-  color: #fff;
+  background: #01426A !important;
+  color: #fff !important;
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
@@ -14,7 +14,7 @@ body {
   transition: 0.4s;
  }
 .button1:hover {
-  background-color: #71C5E8;
+  background-color: #71C5E8 !important;
   color: #fff;
   cursor: pointer;
  }
