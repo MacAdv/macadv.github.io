@@ -112,7 +112,8 @@
 
   /* setting the background for the tabbed section */
   #page {
-    background: linear-gradient(180deg, #fff 972px, #f1f1f1 0);
+    /* Disabled, this makes a man page look like junk */
+    /* background: linear-gradient(180deg, #fff 972px, #f1f1f1 0); */
   }
 
   div.part.giving-tabs {
