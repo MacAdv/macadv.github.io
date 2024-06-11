@@ -3,7 +3,7 @@ body {
  }
 
 /* BUTTONS */
-.button1 {
+.button1, .replicate_insert {
   background: #01426A !important;
   color: #fff !important;
   font-weight: bold;
@@ -13,7 +13,7 @@ body {
   width: 190px;
   transition: 0.4s;
  }
-.button1:hover {
+ .button1:hover, .replicate_insert:hover {
   background-color: #71C5E8 !important;
   color: #fff;
   cursor: pointer;
