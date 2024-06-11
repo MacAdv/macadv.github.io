@@ -487,6 +487,7 @@ div#card-location {
 }
 
 /* the calendar */
+/* 
 .ui-datepicker {
   width: 100% !important;
 }
@@ -494,7 +495,7 @@ div#card-location {
 .ui-datepicker-header {
   font-size: 14px;
   border-radius: 3px;
-}
+} */
 
 /* replicate block links ... */
 a:link.replicate_insert {
