@@ -18,7 +18,7 @@ body {
   color: #fff;
   cursor: pointer;
  }
-.button2 {
+.button2, replicate_delete {
   background: #71C5E8;
   color: #fff;
   font-weight: bold;
@@ -28,7 +28,7 @@ body {
   max-width: 190px;
   transition: 0.4s;
  }
-.button2:hover {
+.button2:hover, replicate_delete:hover {
   background-color: #EF4F26;
   color: #fff;
   cursor: pointer;
