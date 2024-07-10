@@ -113,3 +113,69 @@ button.default.form_button_submit:hover {
 .footer-contact strong {
   color: var(--mac_white); /** Because we set the global color to mac_black, this string tag needs to be set to white for the footer **/
 }
+
+
+/* NEW ADDITIONS FROM KATHRYN */
+
+.form_response label {
+  color: var(--mac_blue);
+}
+
+/** adjust color of header rows and text **/
+tr.column>th {
+  background: var(--mac_blue);
+  color: var(--mac_white) !important;
+}
+tr.header {
+  display: none;
+}
+a.replicate_delete {
+  color: var(--mac_white);
+}
+
+/** Add guest/registrant link **/
+a.replicate_insert {
+  background-color: var(--mac_blue);
+  color: var(--mac_white);
+  border-radius: var(--border_radius);
+  padding: 10px 15px 10px 15px;
+  margin-left: 5px;
+  font-size: var(--sub_size);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+a.replicate_insert:hover {
+  background-color: var(--mac_blue);
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+}
+
+/** edit related event widget event options **/
+.form_related_date {
+  color: var(--mac_blue);
+}
+
+/* FROM GIVING DAY PORTAL CSS FILE / Lloyd */
+.form_container input:not([type="checkbox"]):not([type="radio"]),
+.form_container textarea {
+  width: 100%;
+}
+
+.form_container select:not([aria-label="Month"]):not([aria-label="Day"]):not([aria-label="Year"]):not([aria-label^="Recurring"]) {
+  width: 100%;
+}
+.form_container input:not([type="checkbox"]):not([type="radio"]),
+.form_container select,
+.form_container textarea {
+  font-size: 16px;
+  padding: 9px;
+  margin: 6px 0 4px;
+  border: 1px solid #ccc;
+  color: var(--mac_black);
+  line-height: normal;
+  box-sizing: border-box;
+  border-radius: var(--border_radius);
+}
+
+.form_container select {
+  background-color: var(--mac_sheer_gray);
+}
