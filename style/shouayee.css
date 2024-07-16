@@ -27,7 +27,7 @@
 * {
   line-height: 24px;
   font-family: var(--bodycopy_style);
-  color: var(--mac_black);
+  /* color: var(--mac_black); */
 }
 #content {
   background-color: white;
