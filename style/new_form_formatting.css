@@ -1,0 +1,185 @@
+
+/** USE CAUTION WHEN EDITING THIS FILE - IT IS OFTEN REFERENCED BY LIVE EVENTS/FORMS IN SLATE  **/
+/** Copied from Shouayee.css in July 2024 **/
+
+:root {
+    /** Colors **/
+    --mac_blue: #01426A;
+    --mac_light_blue: #72c5e7;
+    --mac_sheer_blue: #E3F2FA;
+    --mac_orange: #D44420;
+    --mac_sheer_gray: #E9EBEB;
+    --mac_light_gray: #A5ADAF;
+    --mac_gray: #5B6770;
+    --mac_white: #ffffff;
+    --mac_black: #181A1B;
+    /** Fonts **/
+    --heading_style_light: NewslabLight;
+    --heading_style_medium: NewslabMedium;
+    --bodycopy_style: DIN Next W01 Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --bodycopy_weight: normal;
+    --title_size: 3rem;
+    --h1_size: 1.4rem;
+    --h2_size: 1.2rem;
+    --p_size: 1rem;
+    --sub_size: 0.9rem;
+    /** Border **/
+    --border_gray: 1px solid var(--mac_gray);
+    --border_sheer_gray: 1px solid var(--mac_sheer_gray);
+    --border_radius: 5px;
+  }
+  * {
+    line-height: 24px;
+    font-family: var(--bodycopy_style);
+    /* color: var(--mac_black); */
+  }
+  #content {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 85%;
+    border-radius: var(--border_radius);
+    margin: auto;
+  }
+  #global {
+    margin: 18px 0 24px 0;
+  }
+  h1 {
+      color: var(--mac_blue);
+    margin: 2% 2% 2% 0;
+    line-height: 64px;
+    font-family: var(--heading_style_light);
+    font-weight: normal;
+    text-align: center;
+  }
+  textarea{
+    border-radius: var(--border_radius);
+  }
+  input{
+    border-radius: var(--border_radius);
+  }
+  #register_map {
+    z-index: 0 !important;
+    width: 200px !important;
+    margin: 25px !important;
+    text-align: left !important;
+  }
+  #map {
+    border-color: var(--mac_sheer_gray);
+    border-radius: var(--border_radius);
+    height: 200px !important;
+  }
+  #register_location {
+    margin-top: -24px; /** When there is a map, the top margin becomes larger because of the space the map occupies, so we reduce that space **/
+  }
+  .form_label{
+    color: var(--mac_blue);
+    font-family: var(--heading_style_medium);
+  }
+  div.form_header .form_label {
+    background-color: var(--mac_sheer_gray);
+    font-family: var(--heading_style_medium);
+    font-weight: normal;
+  }
+  div.form_address label.form_label {
+    font-weight: normal;
+    font-family: var(--heading_style_light);
+  }
+  .form_selectable fieldset .form_responses .form_response label{
+    cursor: pointer !important;
+    outline: none !important;
+    border: var(--border_sheer_gray);
+    border-radius: var(--border_radius);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+  .form_selectable fieldset .form_responses .form_response label:hover{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+  }
+  .form_question[data-required="1"] .form_label::after {
+    color: var(--mac_orange);
+    content: " *";
+    font-weight: bold;
+  }
+  button.default.form_button_submit {
+    float: right;
+    background-color: var(--mac_blue);
+    color: var(--mac_white);
+    border-radius: var(--border_radius);
+    padding: 10px 15px 10px 15px;
+    font-size: var(--sub_size);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+  button.default.form_button_submit:hover {
+    background-color: var(--mac_blue);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+  }
+  .footer-contact strong {
+    color: var(--mac_white); /** Because we set the global color to mac_black, this string tag needs to be set to white for the footer **/
+  }
+  
+  
+  /* NEW ADDITIONS FROM KATHRYN */
+  
+  .form_response label {
+    color: var(--mac_blue);
+  }
+  
+  /** adjust color of header rows and text **/
+  tr.column>th {
+    background: var(--mac_blue);
+    color: var(--mac_white) !important;
+  }
+  tr.header {
+    display: none;
+  }
+  a.replicate_delete {
+    color: var(--mac_white);
+  }
+  
+  /** Add guest/registrant link **/
+  a.replicate_insert {
+    background-color: var(--mac_blue);
+    color: var(--mac_white);
+    border-radius: var(--border_radius);
+    padding: 10px 15px 10px 15px;
+    margin-left: 5px;
+    font-size: var(--sub_size);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+  a.replicate_insert:hover {
+    background-color: var(--mac_blue);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.2);
+  }
+  
+  /** edit related event widget event options **/
+  .form_related_date {
+    color: var(--mac_blue);
+  }
+  
+  /* FROM GIVING DAY PORTAL CSS FILE / Lloyd */
+  .form_container input:not([type="checkbox"]):not([type="radio"]),
+  .form_container textarea {
+    width: 100%;
+  }
+  
+  .form_container select:not([aria-label="Month"]):not([aria-label="Day"]):not([aria-label="Year"]):not([aria-label^="Recurring"]) {
+    width: 100%;
+  }
+  .form_container input:not([type="checkbox"]):not([type="radio"]),
+  .form_container select,
+  .form_container textarea {
+    font-size: 16px;
+    padding: 9px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    color: var(--mac_black);
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: var(--border_radius);
+  }
+  
+  .form_container select {
+    background-color: var(--mac_sheer_gray);
+  }
