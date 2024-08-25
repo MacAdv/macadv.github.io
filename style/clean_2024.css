@@ -46,6 +46,24 @@ body {
 
 
 
+/* || Typography */
+
+/* … */
+
+/* || Header and Main Navigation */
+
+h1 {
+  color: var(--mac_blue);
+  margin: 2% 2% 2% 0;
+  line-height: 64px;
+  font-family: var(--heading_style_light);
+  font-size: var(--h1_size);
+  font-weight: normal;
+  text-align: center;
+}
+
+
+
 
 
 /* BUTTONS */
