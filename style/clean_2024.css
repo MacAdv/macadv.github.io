@@ -1,10 +1,56 @@
-body {
-  font-family: 'Tahoma', sans-serif, arial;
- }
+/* || GENERAL STYLES */
+
+:root {
+  /** Colors **/
+  --mac_blue: #01426A;
+  --mac_light_blue: #72c5e7;
+  --mac_sheer_blue: #E3F2FA;
+  --mac_orange: #D44420;
+  --mac_sheer_gray: #E9EBEB;
+  --mac_light_gray: #A5ADAF;
+  --mac_gray: #5B6770;
+  --mac_white: #ffffff;
+  --mac_black: #181A1B;
+  /** Fonts **/
+  --heading_style_light: NewslabLight;
+  --heading_style_medium: NewslabMedium;
+  --bodycopy_style: DIN Next W01 Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --bodycopy_weight: normal;
+  --title_size: 3rem;
+  --h1_size: 1.4rem;
+  --h2_size: 1.2rem;
+  --p_size: 1rem;
+  --sub_size: 0.9rem;
+  /** Border **/
+  --border_gray: 1px solid var(--mac_gray);
+  --border_sheer_gray: 1px solid var(--mac_sheer_gray);
+  --border_radius: 5px;
+}
+* {
+  line-height: 24px;
+  font-family: var(--bodycopy_style);
+  /* color: var(--mac_black); */
+}
+
+body { 
+  font-smoothing: antialiased; 
+  -webkit-font-smoothing: antialiased; 
+  -ms-font-smoothing: antialiased; 
+  -moz-font-smoothing: antialiased; 
+  background-color: rgb(255, 255, 255); 
+  color: rgb(0, 0, 0); 
+  /* font-family: NewslabLight, georgia, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;     
+  font-size: 1rem; 
+  line-height: 1.75rem;  */
+}
+
+
+
+
 
 /* BUTTONS */
 .button1, .replicate_insert {
-  background: #01426A !important;
+  background: var(--mac_blue) !important;
   color: #fff !important;
   font-weight: bold;
   text-align: center;
@@ -14,12 +60,12 @@ body {
   transition: 0.4s;
  }
  .button1:hover, .replicate_insert:hover {
-  background-color: #71C5E8 !important;
+  background-color: var(--mac_light_blue) !important;
   color: #fff;
   cursor: pointer;
  }
 .button2, replicate_delete {
-  background: #71C5E8;
+  background: var(--mac_light_blue);
   color: #fff;
   font-weight: bold;
   text-align: center;
@@ -29,12 +75,12 @@ body {
   transition: 0.4s;
  }
 .button2:hover, replicate_delete:hover {
-  background-color: #EF4F26;
+  background-color: var(--mac_orange);
   color: #fff;
   cursor: pointer;
  }
 .button3 {
-  background: #D44420;
+  background: var(--mac_orange);
   color: #fff;
   font-weight: bold;
   text-align: center;
@@ -44,7 +90,7 @@ body {
   transition: 0.4s;
  }
 .button3:hover {
-  background-color: #5B6770;
+  background-color: var(--mac_gray);
   color: #fff;
   cursor: pointer;
  }
@@ -59,14 +105,14 @@ body {
   box-sizing: border-box;
  }
 .info-tile {
-  border: 1px solid #A2AAAD;
+  border: 1px solid var(--mac_light_gray);
   border-radius: 5px;
   padding: 0 25px 5px 25px;
   margin: 3px;
   width: 300px;
  }
 .info-tile-header {
-  color: #5B6770;
+  color: var(--mac_gray);
   width: 100%;
   text-align: center;
   font-size: 11px;
@@ -76,12 +122,12 @@ body {
   margin: 0 10px 0 -17px;
  }
 .tile-label {
- color: #01426A;
+ color: var(--mac_blue);
  font-weight: normal;
  text-transform: capitalize;
  }
 .tile-data {
-  color: #EF4F26;
+  color: var(--mac_orange);
   font-weight: bold;
   text-transform: capitalize;
  }
@@ -93,7 +139,7 @@ body {
  }
 .info-tile-footer {
   clear: both;
-  color: #5B6770;
+  color: var(--mac_gray);
   font-style: italic;
   text-align: left;
   font-size: 11px;
@@ -117,32 +163,32 @@ body {
   width: 175px;
  }
 .stat-tile {
-  border: 1px solid #A2AAAD;
+  border: 1px solid var(--mac_light_gray);
   padding: 10px;
   border-radius: 5px;
   text-align: center;
  }
 .tile-label {
-  color: #01426A;
+  color: var(--mac_blue);
   font-weight: normal;
   text-transform: capitalize;
  }
 .tile-data {
-  color: #EF4F26;
+  color: var(--mac_orange);
   font-weight: bold;
   text-transform: capitalize;
  }
 
   /* MAC COLOR TILES */
-.stat-tile.macblue { background-color: #01426A; }
-.stat-tile.macorange { background-color: #D44420; }
-.stat-tile.ltgray { background-color: #A5ADAF; }
-.stat-tile.dkgray { background-color: #5B6770; }
-.stat-tile.white { background-color: #ffffff; }
-.stat-tile.black { background-color: #000000; }
-.stat-tile.skyblue { background-color: #71C5E8; }
-.stat-tile.gold { background-color: #FFB500; }
-.stat-tile.green { background-color: #658D1B; }
+.stat-tile.macblue { background-color: var(--mac_blue) }
+.stat-tile.macorange { background-color: var(--mac_orange) }
+.stat-tile.ltgray { background-color: var(--mac_light_gray) }
+.stat-tile.dkgray { background-color: var(--mac_gray)}
+.stat-tile.white { background-color: var(--mac_white)}
+.stat-tile.black { background-color: var(--mac_black)}
+.stat-tile.skyblue { background-color: var(--mac_light_blue)  }
+.stat-tile.gold { background-color:  #FFB500; }
+.stat-tile.green { background-color:  #658D1B; }
 .stat-tile.plum { background-color: #8A1B61; }
 .stat-tile.red { background-color: #C8102E; }
 
