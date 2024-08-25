@@ -1,3 +1,37 @@
+/* || GENERAL STYLES */
+
+:root {
+    /** Colors **/
+    --mac_blue: #01426A;
+    --mac_light_blue: #72c5e7;
+    --mac_sheer_blue: #E3F2FA;
+    --mac_orange: #D44420;
+    --mac_sheer_gray: #E9EBEB;
+    --mac_light_gray: #A5ADAF;
+    --mac_gray: #5B6770;
+    --mac_white: #ffffff;
+    --mac_black: #181A1B;
+    /** Fonts **/
+    --heading_style_light: NewslabLight;
+    --heading_style_medium: NewslabMedium;
+    --bodycopy_style: DIN Next W01 Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --bodycopy_weight: normal;
+    --title_size: 3rem;
+    --h1_size: 1.4rem;
+    --h2_size: 1.2rem;
+    --p_size: 1rem;
+    --sub_size: 0.9rem;
+    /** Border **/
+    --border_gray: 1px solid var(--mac_gray);
+    --border_sheer_gray: 1px solid var(--mac_sheer_gray);
+    --border_radius: 5px;
+}
+* {
+    line-height: 24px;
+    font-family: var(--bodycopy_style);
+    /* color: var(--mac_black); */
+}
+
 body { 
     font-smoothing: antialiased; 
     -webkit-font-smoothing: antialiased; 
@@ -9,6 +43,25 @@ body {
     font-size: 1rem; 
     line-height: 1.75rem;  */
 }
+
+
+/* || Typography */
+
+/* … */
+
+/* || Header and Main Navigation */
+
+  h1 {
+      color: var(--mac_blue);
+    margin: 2% 2% 2% 0;
+    line-height: 64px;
+    font-family: var(--heading_style_light);
+    font-weight: normal;
+    text-align: center;
+  }
+
+
+
 h1{
 	font-size: 3rem;
 }
@@ -22,6 +75,11 @@ h2, h3, h4.cr {
 h2, h3 { 
     font-weight: 300; 
 }
+
+h2 {
+    padding: 15px 2px 10px !important; 
+}     
+
 h4.cr { 
     font-weight: 500; 
 }
@@ -42,6 +100,19 @@ a, a:link, a:visited {
 a:focus, a:hover, a:hover::after { 
     color: rgb(212, 68, 32); 
 }
+
+/* || SITEWIDE */
+#content {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 85%;
+    border-radius: var(--border_radius);
+    margin: auto;
+  }
+  #global {
+    margin: 18px 0 24px 0;
+  }
+
 
 
 /* Button Markup */
@@ -144,14 +215,6 @@ a.button {
     float: left;
 
 }
-
-/* GENERAL */
-    
-h2 {
-    padding: 15px 2px 10px !important; 
-}
-    
-     
 
 
 .keynames {
