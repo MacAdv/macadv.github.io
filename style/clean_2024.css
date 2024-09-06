@@ -67,7 +67,7 @@ h1 {
 
 
 /* BUTTONS */
-.button1, .replicate_insert {
+.button1, .replicate_insert, a.button1, a.replicate_insert {
   background: var(--mac_blue) !important;
   color: #fff !important;
   font-weight: bold;
@@ -75,14 +75,16 @@ h1 {
   border-radius: 10px;
   padding: 8px;
   width: 190px;
+  display: inline-block; /* Makes <a> behave like a block element */
   transition: 0.4s;
- }
- .button1:hover, .replicate_insert:hover {
+}
+.button1:hover, .replicate_insert:hover, a.button1:hover, a.replicate_insert:hover {
   background-color: var(--mac_light_blue) !important;
   color: #fff;
   cursor: pointer;
- }
-.button2, replicate_delete {
+}
+
+.button2, .replicate_delete, a.button2, a.replicate_delete {
   background: var(--mac_light_blue);
   color: #fff;
   font-weight: bold;
@@ -90,14 +92,16 @@ h1 {
   border-radius: 10px;
   padding: 8px;
   max-width: 190px;
+  display: inline-block;
   transition: 0.4s;
- }
-.button2:hover, replicate_delete:hover {
+}
+.button2:hover, .replicate_delete:hover, a.button2:hover, a.replicate_delete:hover {
   background-color: var(--mac_orange);
   color: #fff;
   cursor: pointer;
- }
-.button3 {
+}
+
+.button3, a.button3 {
   background: var(--mac_orange);
   color: #fff;
   font-weight: bold;
@@ -105,13 +109,15 @@ h1 {
   border-radius: 10px;
   padding: 8px;
   max-width: 190px;
+  display: inline-block;
   transition: 0.4s;
- }
-.button3:hover {
+}
+.button3:hover, a.button3:hover {
   background-color: var(--mac_gray);
   color: #fff;
   cursor: pointer;
- }
+}
+
 
  /* INFO TILE CONTAINER */
  .info-tile-container {
