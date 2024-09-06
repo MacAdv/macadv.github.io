@@ -86,14 +86,14 @@ h1 {
 
 .button2, .replicate_delete, a.button2, a.replicate_delete {
   background: var(--mac_light_blue);
-  color: #fff;
+  color: #fff !important; 
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
-  padding: 8px;
+  padding: 8px !important; /* Override any inherited padding */
   max-width: 190px;
-  display: inline-block;
   transition: 0.4s;
+  text-decoration: none !important; 
 }
 .button2:hover, .replicate_delete:hover, a.button2:hover, a.replicate_delete:hover {
   background-color: var(--mac_orange);
