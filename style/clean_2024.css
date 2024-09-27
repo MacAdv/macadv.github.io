@@ -100,7 +100,7 @@ a.button1:hover, a.replicate_insert:hover,
   transition: 0.4s;
   text-decoration: none !important; 
 }
-.button2:hover, .replicate_delete:hover, a.button2:hover, a.replicate_delete:hover {
+.button2:hover, .replicate_delete:hover, a.button2:hover, a.replicate_delete:hover, .button2 a {
   background-color: var(--mac_orange);
   color: #fff;
   cursor: pointer;
@@ -117,7 +117,7 @@ a.button1:hover, a.replicate_insert:hover,
   display: inline-block;
   transition: 0.4s;
 }
-.button3:hover, a.button3:hover {
+.button3:hover, a.button3:hover, .button3 a {
   background-color: var(--mac_gray);
   color: #fff;
   cursor: pointer;
