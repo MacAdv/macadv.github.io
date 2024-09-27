@@ -83,6 +83,7 @@ h1 {
 
 .button1 a , .button2 a , .button3 a {
   color: #fff;
+  text-decoration: none !important; 
 }
 
 .button1:hover, .replicate_insert:hover, 
