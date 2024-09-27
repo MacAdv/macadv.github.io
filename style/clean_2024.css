@@ -69,7 +69,7 @@ h1 {
 /* BUTTONS */
 .button1, .replicate_insert
 , a.button1, a.replicate_insert
-, .button1 a {
+{
   background: var(--mac_blue) !important;
   color: #fff !important;
   font-weight: bold;
@@ -82,8 +82,8 @@ h1 {
 }
 .button1:hover, .replicate_insert:hover, 
 a.button1:hover, a.replicate_insert:hover,
-.button1 a:hover
- {
+.button1 a , .button1 a:hover
+{
   background-color: var(--mac_light_blue) !important;
   color: #fff;
   cursor: pointer;
