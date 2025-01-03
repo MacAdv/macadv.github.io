@@ -58,14 +58,17 @@ const loadTab = (tab, queryString, isBack) => {
     const qs = queryString ? decodeQueryString(queryString) : {};
     delete qs["tab"];
 
+    
     const newQueryString = Object.keys(qs).length > 0 ? "&" + encodeQueryString(qs) : "";
-
+    
     if (!isBack) {
         history.pushState({ tab, queryString: newQueryString }, null, `?tab=${tab}${newQueryString}`);
     }
-
+    
+    // Get the TabID element from the data-id
+    const tabID = qs["id"];
     // Update the navigation state
-    updateNavState(tab);
+    updateNavState(tabID);
 
     // Load content dynamically into the content area using loadSlatePortalContent
     loadSlatePortalContent(`?cmd=${tab}${newQueryString}`, "#mainContentDiv");
