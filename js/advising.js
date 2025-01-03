@@ -16,22 +16,27 @@ const handleTimeout = (response, xhr) => {
 
 /**
  * Updates the navigation state by managing active links and collapsed submenus.
- * @param {string} tab - The tab URL to activate.
+ * @param {string} tabID - The tab URL to activate.
  */
-const updateNavState = (tab) => {
+const updateNavState = (tabID) => {
     // Remove active state from all nav links
     $("#navbar-sidebar a").removeClass("active");
 
-    // Set the clicked link as active
-    $(`#navbar-sidebar a[href='${tab}']`).addClass("active");
+    // Add active class to the correct link by matching data-tab
+    const activeLink = $(`#navbar-sidebar a[data-id='${tabID}']`);
+    if (activeLink.length) {
+        activeLink.addClass("active");
 
-    // Collapse all submenus
-    $("#navbar-sidebar .collapse").removeClass("show");
+        // Collapse all submenus
+        $("#navbar-sidebar .collapse").removeClass("show");
 
-    // Expand the submenu containing the active link
-    const activeSubmenu = $(`#navbar-sidebar a[href='${tab}']`).closest(".collapse");
-    if (activeSubmenu.length) {
-        activeSubmenu.addClass("show");
+        // Expand the submenu containing the active link
+        const activeSubmenu = activeLink.closest(".collapse");
+        if (activeSubmenu.length) {
+            activeSubmenu.addClass("show");
+        }
+    } else {
+        console.warn(`No navigation link found for tabID: ${tabID}`);
     }
 };
 
