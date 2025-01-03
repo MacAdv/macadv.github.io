@@ -1,31 +1,18 @@
 /**
- * Loads content from a Slate Portal View page into a specified div.
- *
- * This function fetches the HTML content of a Slate Portal View page, extracts the content 
- * within a div with the class 'dynamic-page-wrapper', and replaces the content of a 
- * specified div with the extracted content.
- *
- * @param {string} pageUrl The URL of the Slate Portal View page to load.
- * @param {string} targetDivId The ID of the div where the content should be displayed.
+ * Handles timeout detection by checking for a login page in the response.
+ * Redirects to the login page if detected.
+ * @param {string} response - The server response HTML.
+ * @param {object} xhr - The XMLHttpRequest object.
+ * @returns {boolean} - True if timeout detected and handled, false otherwise.
  */
-function loadSlatePortalContent(pageUrl, targetDivId) {
-    $.ajax({
-        url: pageUrl,
-        dataType: 'html',
-        success: function (data) {
-            // Find the content within the dynamic-page-wrapper div
-            var content = $(data).find('.dynamic-page-wrapper').html();
-
-            // Replace the content of the target div
-            $(targetDivId).html(content);
-        },
-        error: function () {
-            // Handle errors (e.g., display an error message)
-            $(targetDivId).html('<p>Error loading content.</p>');
-        }
-    });
-}
-
+const handleTimeout = (response, xhr) => {
+    if (xhr.status === 200 && response.includes("/account/login")) {
+        const loginUrl = $(response).find("a").attr("href") || "/account/login";
+        window.location.href = loginUrl;
+        return true;
+    }
+    return false;
+};
 
 /**
  * Function to dynamically load content into a specific tab and manage browser history.
@@ -36,9 +23,6 @@ function loadSlatePortalContent(pageUrl, targetDivId) {
  */
 const loadTab = (tab, queryString, isBack) => {
     // Decode query string into an object using jQuery
-    /**
-     * This function parses a query string into a key-value object for easier manipulation.
-     */
     const decodeQueryString = (query) => {
         return query.split('&').reduce((acc, pair) => {
             const [key, value] = pair.split('=');
@@ -73,15 +57,44 @@ const loadTab = (tab, queryString, isBack) => {
     $(`#navbar-sidebar a[href='${tab}']`).closest(".collapse").addClass("show");
 
     // Load content dynamically into the content area
-    // $("#content_body").load(`?cmd=${tab}${newQueryString}`);
-    loadSlatePortalContent(`?cmd=${tab}${newQueryString}`, '#mainContentDiv')
+    $("#content_body").load(`?cmd=${tab}${newQueryString}`, function (response, status, xhr) {
+        if (handleTimeout(response, xhr)) return;
+    });
 };
+
+/**
+ * Loads content from a Slate Portal View page into a specified div.
+ * This function fetches the HTML content of a Slate Portal View page, extracts the content 
+ * within a div with the class 'dynamic-page-wrapper', and replaces the content of a 
+ * specified div with the extracted content.
+ * @param {string} pageUrl - The URL of the Slate Portal View page to load.
+ * @param {string} targetDivId - The ID of the div where the content should be displayed.
+ */
+function loadSlatePortalContent(pageUrl, targetDivId) {
+    $.ajax({
+        url: pageUrl,
+        dataType: 'html',
+        success: function (data, status, xhr) {
+            if (handleTimeout(data, xhr)) return;
+
+            // Find the content within the dynamic-page-wrapper div
+            const content = $(data).find('.dynamic-page-wrapper').html();
+
+            // Replace the content of the target div
+            $(targetDivId).html(content);
+        },
+        error: function () {
+            // Handle errors (e.g., display an error message)
+            $(targetDivId).html('<p>Error loading content.</p>');
+        }
+    });
+}
 
 // Listen for browser back/forward events and reload the state
 $(window).on("popstate", (e) => {
     if (e.originalEvent.state) {
         const state = e.originalEvent.state;
-        loadTab(state.tab, location.search.substring(1), true, "#content_body");
+        loadTab(state.tab, location.search.substring(1), true);
     }
 });
 
