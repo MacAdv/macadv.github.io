@@ -1,16 +1,25 @@
 /**
- * Handles timeout detection by checking for a login page in the response.
+ * Handles timeout detection by checking for redirects or unauthorized access.
  * Redirects to the login page if detected.
  * @param {string} response - The server response HTML.
  * @param {object} xhr - The XMLHttpRequest object.
  * @returns {boolean} - True if timeout detected and handled, false otherwise.
  */
 const handleTimeout = (response, xhr) => {
-    if (xhr.status === 200 && response.includes("/account/login")) {
-        const loginUrl = $(response).find("a").attr("href") || "/account/login";
+    // Check for 302 redirect or 401 unauthorized status
+    if (xhr.status === 302 || xhr.status === 401) {
+        const loginUrl = xhr.getResponseHeader("Location") || "/account/login";
         window.location.href = loginUrl;
         return true;
     }
+
+    // Check for specific login page content in the HTML response
+    if (xhr.status === 200 && $(response).find("body#login-page").length > 0) {
+        const loginUrl = xhr.responseURL || "/account/login";
+        window.location.href = loginUrl;
+        return true;
+    }
+
     return false;
 };
 
