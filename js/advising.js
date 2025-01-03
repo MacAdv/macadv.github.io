@@ -57,9 +57,7 @@ const loadTab = (tab, queryString, isBack) => {
     $(`#navbar-sidebar a[href='${tab}']`).closest(".collapse").addClass("show");
 
     // Load content dynamically into the content area
-    $("#content_body").load(`?cmd=${tab}${newQueryString}`, function (response, status, xhr) {
-        if (handleTimeout(response, xhr)) return;
-    });
+    loadSlatePortalContent(`?cmd=${tab}${newQueryString}`, '#mainContentDiv')
 };
 
 /**
