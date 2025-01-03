@@ -15,6 +15,27 @@ const handleTimeout = (response, xhr) => {
 };
 
 /**
+ * Updates the navigation state by managing active links and collapsed submenus.
+ * @param {string} tab - The tab URL to activate.
+ */
+const updateNavState = (tab) => {
+    // Remove active state from all nav links
+    $("#navbar-sidebar a").removeClass("active");
+
+    // Set the clicked link as active
+    $(`#navbar-sidebar a[href='${tab}']`).addClass("active");
+
+    // Collapse all submenus
+    $("#navbar-sidebar .collapse").removeClass("show");
+
+    // Expand the submenu containing the active link
+    const activeSubmenu = $(`#navbar-sidebar a[href='${tab}']`).closest(".collapse");
+    if (activeSubmenu.length) {
+        activeSubmenu.addClass("show");
+    }
+};
+
+/**
  * Function to dynamically load content into a specific tab and manage browser history.
  * Handles query string manipulation, active state updates, and dynamic content loading.
  * @param {string} tab - The identifier or URL for the tab to load.
@@ -22,7 +43,6 @@ const handleTimeout = (response, xhr) => {
  * @param {boolean} isBack - Indicates if the navigation is triggered by a browser back/forward action.
  */
 const loadTab = (tab, queryString, isBack) => {
-    // Decode query string into an object using jQuery
     const decodeQueryString = (query) => {
         return query.split('&').reduce((acc, pair) => {
             const [key, value] = pair.split('=');
@@ -36,28 +56,21 @@ const loadTab = (tab, queryString, isBack) => {
     };
 
     const qs = queryString ? decodeQueryString(queryString) : {};
-
-    // Remove 'tab' parameter to avoid duplication
     delete qs["tab"];
 
-    // Reconstruct query string with additional parameters
     const newQueryString = Object.keys(qs).length > 0 ? "&" + encodeQueryString(qs) : "";
 
-    // Update browser history if not triggered by back/forward navigation
     if (!isBack) {
         history.pushState({ tab, queryString: newQueryString }, null, `?tab=${tab}${newQueryString}`);
     }
 
-    // Update active tab UI
-    $("#navbar-sidebar a").removeClass("active");
-    $(`#navbar-sidebar a[href='${tab}']`).addClass("active");
-
-    // Expand parent menus for the active tab
-    $("#navbar-sidebar .collapse").removeClass("show");
-    $(`#navbar-sidebar a[href='${tab}']`).closest(".collapse").addClass("show");
+    // Update the navigation state
+    updateNavState(tab);
 
     // Load content dynamically into the content area
-    loadSlatePortalContent(`?cmd=${tab}${newQueryString}`, '#mainContentDiv')
+    $("#content_body").load(`?cmd=${tab}${newQueryString}`, function (response, status, xhr) {
+        if (handleTimeout(response, xhr)) return;
+    });
 };
 
 /**
