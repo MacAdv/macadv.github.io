@@ -67,10 +67,8 @@ const loadTab = (tab, queryString, isBack) => {
     // Update the navigation state
     updateNavState(tab);
 
-    // Load content dynamically into the content area
-    $("#content_body").load(`?cmd=${tab}${newQueryString}`, function (response, status, xhr) {
-        if (handleTimeout(response, xhr)) return;
-    });
+    // Load content dynamically into the content area using loadSlatePortalContent
+    loadSlatePortalContent(`?cmd=${tab}${newQueryString}`, "#mainContentDiv");
 };
 
 /**
