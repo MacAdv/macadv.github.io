@@ -107,17 +107,17 @@ $(window).on("popstate", (e) => {
     }
 });
 
-// Attach click event listeners to nav links, including dynamically loaded ones
-$(document).on("click", "#navbar-sidebar a", function (e) {
-    e.preventDefault();
-    const href = $(this).attr("href");
-    loadTab(href, location.search.substring(1));
-});
+// // Attach click event listeners to nav links, including dynamically loaded ones
+// $(document).on("click", "#navbar-sidebar a", function (e) {
+//     e.preventDefault();
+//     const href = $(this).attr("href");
+//     loadTab(href, location.search.substring(1));
+// });
 
-// Prevent collapse toggle for submenu links
-$(document).on("click", "#navbar-sidebar .collapse .load-content", function (e) {
-    e.stopPropagation(); // Prevent Bootstrap's collapse behavior
-});
+// // Prevent collapse toggle for submenu links
+// $(document).on("click", "#navbar-sidebar .collapse .load-content", function (e) {
+//     e.stopPropagation(); // Prevent Bootstrap's collapse behavior
+// });
 
 // Handle clicks on dynamically loaded elements and pass data attributes as query string parameters
 $(document).on("click", ".load-content", function (e) {
