@@ -27,12 +27,12 @@ const handleTimeout = (response, xhr) => {
  * Updates the navigation state by managing active links and collapsed submenus.
  * @param {string} tabID - The tab URL to activate.
  */
-const updateNavState = (tabID) => {
+const updateNavState = (tabUID) => {
     // Remove active state from all nav links
     $("#navbar-sidebar a").removeClass("active");
 
     // Add active class to the correct link by matching data-tab
-    const activeLink = $(`#navbar-sidebar a[data-id='${tabID}']`);
+    const activeLink = $(`#navbar-sidebar a[data-uid='${tabUID}']`);
     if (activeLink.length) {
         activeLink.addClass("active");
 
@@ -45,7 +45,7 @@ const updateNavState = (tabID) => {
             activeSubmenu.addClass("show");
         }
     } else {
-        console.warn(`No navigation link found for tabID: ${tabID}`);
+        console.warn(`No navigation link found for tabUID: ${tabUID}`);
     }
 };
 
@@ -80,9 +80,9 @@ const loadTab = (tab, queryString, isBack) => {
     }
     
     // Get the TabID element from the data-id
-    const tabID = qs["id"];
+    const tabUID = qs["uid"];
     // Update the navigation state
-    updateNavState(tabID);
+    updateNavState(tabUID);
 
     // Load content dynamically into the content area using loadSlatePortalContent
     loadSlatePortalContent(`?cmd=${tab}${newQueryString}`, "#mainContentDiv");
