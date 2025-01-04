@@ -110,6 +110,7 @@ function loadSlatePortalContent(pageUrl, targetDivId) {
             $(targetDivId).html(content);
         },
         error: function () {
+            if (handleTimeout(data, xhr)) return;
             // Handle errors (e.g., display an error message)
             $(targetDivId).html('<p>Error loading content.</p>');
         }
