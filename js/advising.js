@@ -109,8 +109,13 @@ function loadSlatePortalContent(pageUrl, targetDivId) {
             // Replace the content of the target div
             $(targetDivId).html(content);
         },
-        error: function () {
-            if (handleTimeout(data, xhr)) return;
+        error: function (xhr, textStatus, errorThrown) {
+             // Check for 302 redirect or 401 unauthorized status
+            if (xhr.status === 302 || xhr.status === 401) {
+                const loginUrl = xhr.getResponseHeader("Location") || "/account/login";
+                window.location.href = loginUrl;
+                return ;
+            }
             // Handle errors (e.g., display an error message)
             $(targetDivId).html('<p>Error loading content.</p>');
         }
