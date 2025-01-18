@@ -97,6 +97,8 @@ const loadTab = (tab, queryString, isBack) => {
  * @param {string} targetDivId - The ID of the div where the content should be displayed.
  */
 function loadSlatePortalContent(pageUrl, targetDivId) {
+    $(targetDivId).html("<div>loading...</div");
+    
     $.ajax({
         url: pageUrl,
         dataType: 'html',
