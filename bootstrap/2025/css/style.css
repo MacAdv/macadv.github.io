@@ -22581,3 +22581,7 @@ html[dir=rtl] .choices__input {
 
 /*User CSS*/
 /*# sourceMappingURL=style.css.map */
+        .dt-search {
+            padding: 0px 10px;
+            min-width: 350px;
+        }
