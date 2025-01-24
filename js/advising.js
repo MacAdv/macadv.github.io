@@ -175,6 +175,7 @@ $(() => {
     } else {
         // Set the default tab to the first link in the sidebar if no tab is specified in the URL.
         const defaultTab = $("#navbar-sidebar a").first().data("tab")
+        console.log(defaultTab);
         if (defaultTab) {
             loadTab(defaultTab, location.search.substring(1));
         }
