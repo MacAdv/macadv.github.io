@@ -36,6 +36,7 @@ Table Of Content
 24 OVERLAY SCROLLBARS
 26 FLATPICKER
 27 PURECOUNTER
+28 Student Credits
 ====================== */
 
 "use strict";
@@ -114,6 +115,7 @@ var e = {
         e.stickyElement(),
         e.overlayScrollbars(),
         e.flatPicker(),
+        e.studentCreditsChart(),
         e.pCounter()
         
     },
@@ -1094,6 +1096,51 @@ var e = {
         }
     },
     // END: Purecounter
+
+ // START: 28 Student Credits
+ studentCreditsChart: function () {
+  var cpv = e.select('#ChartStudentCredits');
+  if (e.isVariableDefined(cpv)) {
+    // CHART: Page Views
+    var options = {
+      series: [70, 15, 10],
+      labels: ['Credits-Applied', 'Credits-In-Progress', 'Credits-Needed'],
+      chart: {
+        height: 200,
+        width: 200,
+        offsetX: 0,
+        type: 'donut',
+        sparkline: {
+          enabled: !0
+        }
+      },
+      colors: [
+        ThemeColor.getCssVariableValue('--bs-primary'),
+        ThemeColor.getCssVariableValue('--bs-success'),
+        ThemeColor.getCssVariableValue('--bs-warning')
+      ],
+      tooltip: {
+        theme: "dark"
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+            height: 200,
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }]
+    };
+    var chart = new ApexCharts(document.querySelector("#ChartStudentCredits"), options);
+    chart.render();
+  }
+},
+// END: Student Credits
+
 
 };
 e.init();
