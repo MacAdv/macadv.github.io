@@ -20949,6 +20949,29 @@ a.text-primary-hover:hover, button.text-primary-hover:hover {
   color: var(--bs-primary) !important;
 }
 
+/* Mac sky blue - hover */
+.text-cyan-hover a:hover {
+  color: var(--bs-cyan) !important;
+}
+a.text-cyan-hover:hover, button.text-cyan-hover:hover {
+  color: var(--bs-cyan) !important;
+}
+.text-cyan-hover li:hover {
+  color: var(--bs-cyan) !important;
+}
+
+/* Mac orange - hover */
+.text-orange-hover a:hover {
+  color: var(--bs-orange) !important;
+}
+a.text-orange-hover:hover, button.text-orange-hover:hover {
+  color: var(--bs-orange) !important;
+}
+.text-orange-hover li:hover {
+  color: var(--bs-orange) !important;
+}
+
+
 .font-base {
   font-family: "Roboto", sans-serif !important;
 }
