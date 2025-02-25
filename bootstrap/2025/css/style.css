@@ -4613,7 +4613,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: 0.325rem;
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #066ac9;
+  --bs-nav-pills-link-active-bg: #01426a; /* update from #066ac9 to Mac Blue */
 }
 .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
@@ -18749,7 +18749,7 @@ textarea.form-control-lg {
 }
 
 .nav-pills-bg-soft .nav-link {
-  color: var(--bs-primary);
+  color: var(--bs-blue); /* updated from --bs-primary to Mac Blue */
 }
 
 .nav-pills.nav-tabs-line {
