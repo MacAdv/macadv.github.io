@@ -41,7 +41,7 @@
   --bs-secondary-rgb: 154, 158, 164;
   --bs-success-rgb: 90, 130, 53; /* was 12, 188, 135 , now Mac Green*/
   --bs-info-rgb: 93, 198, 233; /* was 23, 162, 184 , now Mac Sky Blue */
-  --bs-warning-rgb: 247, 195, 46;
+  --bs-warning-rgb: 253, 174, 21; /* was 247, 195, 46, now Mac Gold*/
   --bs-danger-rgb: 214, 41, 62;
   --bs-light-rgb: 245, 247, 249;
   --bs-dark-rgb: 36, 41, 45;
