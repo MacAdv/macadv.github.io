@@ -18695,6 +18695,11 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
 }
 
+.nav-link:hover {
+  background-color: rgba(var(--bs-blue-rgb), var(--bs-bg-opacity));
+  color: var(--bs-white);
+}
+
 .nav.flex-column:not(.nav-pills) .nav-link {
   padding-left: 0;
   padding-top: 0.3rem;
