@@ -4679,9 +4679,9 @@ textarea.form-control-lg {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0;
   --bs-navbar-color: var(--bs-gray-600);
-  --bs-navbar-hover-color: #066ac9;
+  --bs-navbar-hover-color: #71C5E8; /* adjusted from #066ac9 to Mac Sky Blue */
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
-  --bs-navbar-active-color: #066ac9;
+  --bs-navbar-active-color: #71C5E8; /* adjusted from #066ac9 to Mac Sky Blue */
   --bs-navbar-brand-padding-y: 30px;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 0;
@@ -5217,9 +5217,9 @@ textarea.form-control-lg {
 .navbar-dark,
 .navbar[data-bs-theme=dark] {
   --bs-navbar-color: var(--bs-white);
-  --bs-navbar-hover-color: #066ac9 !important;
+  --bs-navbar-hover-color: #71C5E8 !important; /* adjusted from #066ac9 !important to Mac Sky Blue */
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #066ac9 !important;
+  --bs-navbar-active-color: #71C5E8 !important; /* adjusted from #066ac9 !important to Mac Sky Blue */
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
