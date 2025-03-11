@@ -22601,7 +22601,14 @@ html[dir=rtl] .choices__input {
 
 /*User CSS*/
 /*# sourceMappingURL=style.css.map */
-        .dt-search {
-            padding: 0px 10px;
-            min-width: 350px;
-        }
+.dt-search {
+  padding: 0px 10px;
+  min-width: 350px;
+}
+
+
+div#ui-datepicker-div {
+  border: 2px solid;
+  padding: 5px;
+  background: white !important;
+}
