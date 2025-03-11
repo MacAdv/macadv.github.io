@@ -45,7 +45,7 @@
   --bs-danger-rgb: 214, 41, 62;
   --bs-light-rgb: 245, 247, 249;
   --bs-dark-rgb: 36, 41, 45;
-  --bs-orange-rgb: 253, 126, 20;
+  --bs-orange-rgb: 239, 79, 38; /* was 253, 126, 20 , now Mac Orange */
   --bs-purple-rgb: 133, 29, 86; /* was 111, 66, 193 , now Mac Plum*/
   --bs-blue-rgb: 13, 60, 97; /* was 29, 59, 83 , now Mac Blue */
   --bs-primary-text-emphasis: #044a8d;
@@ -99,8 +99,8 @@
   --bs-link-color: #066ac9;
   --bs-link-color-rgb: 6, 106, 201;
   --bs-link-decoration: none;
-  --bs-link-hover-color: #0555a1;
-  --bs-link-hover-color-rgb: 5, 85, 161;
+  --bs-link-hover-color: #71C5E8; /* was #0555a1; */
+  --bs-link-hover-color-rgb: 93, 198, 233; /* was 5, 85, 161; */
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
@@ -170,9 +170,9 @@
   --bs-dark-border-subtle: #343a40;
   --bs-heading-color: inherit;
   --bs-link-color: #066ac9;
-  --bs-link-hover-color: #0555a1;
+  --bs-link-hover-color: #71C5E8; /* was #0555a1; */
   --bs-link-color-rgb: 6, 106, 201;
-  --bs-link-hover-color-rgb: 5, 85, 161;
+  --bs-link-hover-color-rgb: 93, 198, 233; /* was 5, 85, 161; */
   --bs-code-color: #e685b5;
   --bs-highlight-color: #dee2e6;
   --bs-highlight-bg: #664d03;
@@ -4613,7 +4613,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: 0.325rem;
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #066ac9;
+  --bs-nav-pills-link-active-bg: #01426a; /* update from #066ac9 to Mac Blue */
 }
 .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
@@ -4679,9 +4679,9 @@ textarea.form-control-lg {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0;
   --bs-navbar-color: var(--bs-gray-600);
-  --bs-navbar-hover-color: #066ac9;
+  --bs-navbar-hover-color: #71C5E8; /* adjusted from #066ac9 to Mac Sky Blue */
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
-  --bs-navbar-active-color: #066ac9;
+  --bs-navbar-active-color: #71C5E8; /* adjusted from #066ac9 to Mac Sky Blue */
   --bs-navbar-brand-padding-y: 30px;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 0;
@@ -5217,9 +5217,9 @@ textarea.form-control-lg {
 .navbar-dark,
 .navbar[data-bs-theme=dark] {
   --bs-navbar-color: var(--bs-white);
-  --bs-navbar-hover-color: #066ac9 !important;
+  --bs-navbar-hover-color: #71C5E8 !important; /* adjusted from #066ac9 !important to Mac Sky Blue */
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #066ac9 !important;
+  --bs-navbar-active-color: #71C5E8 !important; /* adjusted from #066ac9 !important to Mac Sky Blue */
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
@@ -18749,7 +18749,7 @@ textarea.form-control-lg {
 }
 
 .nav-pills-bg-soft .nav-link {
-  color: var(--bs-primary);
+  color: var(--bs-blue); /* updated from --bs-primary to Mac Blue */
 }
 
 .nav-pills.nav-tabs-line {
