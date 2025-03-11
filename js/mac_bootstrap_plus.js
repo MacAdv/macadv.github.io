@@ -1,5 +1,5 @@
 
-/* COPY OF advising.js for Student Org Mgmt portal */
+/* COPY OF advising.js for all Bootstrap portals */
 
 /**
  * Handles timeout detection by checking for redirects or unauthorized access.
@@ -99,33 +99,87 @@ const loadTab = (tab, queryString, isBack) => {
  * @param {string} pageUrl - The URL of the Slate Portal View page to load.
  * @param {string} targetDivId - The ID of the div where the content should be displayed.
  */
+// Override loadSlatePortalContent to ensure active tab restoration after dynamic loading
 function loadSlatePortalContent(pageUrl, targetDivId) {
-    $(targetDivId).html("<div>loading...</div");
-    
+    $(targetDivId).html("<div>loading...</div>");
+
     $.ajax({
         url: pageUrl,
         dataType: 'html',
         success: function (data, status, xhr) {
             if (handleTimeout(data, xhr)) return;
 
-            // Find the content within the dynamic-page-wrapper div
+            // Extract the content from .dynamic-page-wrapper
             const content = $(data).find('.dynamic-page-wrapper').html();
-
-            // Replace the content of the target div
             $(targetDivId).html(content);
+
+            // Ensure the active tab is restored after the content is inserted
+            restoreActiveTab();
+            setupTabListeners(); // Re-bind event listeners for the dynamically injected tabs
         },
         error: function (xhr, textStatus, errorThrown) {
-             // Check for 302 redirect or 401 unauthorized status
             if (xhr.status === 302 || xhr.status === 401) {
                 const loginUrl = xhr.getResponseHeader("Location") || "/account/login";
                 window.location.href = loginUrl;
-                return ;
+                return;
             }
-            // Handle errors (e.g., display an error message)
             $(targetDivId).html('<p>Error loading content.</p>');
         }
     });
 }
+
+
+// Function to restore the last active tab
+function restoreActiveTab() {
+    let activeTabId = localStorage.getItem("activeTab");
+
+    if (activeTabId) {
+        let storedTab = document.querySelector(`button.nav-link[id="${activeTabId}"]`);
+        if (storedTab) {
+            new bootstrap.Tab(storedTab).show();
+        }
+    }
+}
+
+// Function to set up event listeners on tabs (for dynamically loaded content)
+function setupTabListeners() {
+    document.querySelectorAll('.nav-link[data-bs-toggle="pill"]').forEach(tab => {
+        tab.addEventListener("shown.bs.tab", function (event) {
+            let selectedTabId = event.target.id;
+            localStorage.setItem("activeTab", selectedTabId);
+        });
+    });
+}
+
+
+// Initialize the first tab based on the URL or restore from storage
+$(document).ready(() => {
+    const decodeQueryString = (query) => {
+        return query.split('&').reduce((acc, pair) => {
+            const [key, value] = pair.split('=');
+            acc[decodeURIComponent(key)] = decodeURIComponent(value || '');
+            return acc;
+        }, {});
+    };
+
+    const qs = decodeQueryString(location.search.substring(1));
+
+    if (qs["tab"]) {
+        loadTab(qs["tab"], location.search.substring(1));
+    } else {
+        // Set the default tab to the first sidebar link if no tab is specified in the URL.
+        const defaultTab = $("#navbar-sidebar a").first().data("tab");
+        if (defaultTab) {
+            loadTab(defaultTab, location.search.substring(1));
+        }
+    }
+});
+
+
+
+
+
+
 
 // Listen for browser back/forward events and reload the state
 $(window).on("popstate", (e) => {
