@@ -10,5 +10,5 @@ div#ui-datepicker-div {
 }
 
 .nav-item{
-    color: --var(--bs-white) !important;
+    color: var(--bs-white) !important;
 }
