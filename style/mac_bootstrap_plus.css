@@ -7,4 +7,8 @@ div#ui-datepicker-div {
     border: 2px solid;
     padding: 5px;
     background: white !important;
-  }
+}
+
+.nav-item{
+    color: --var(--bs-white) !important;
+}
