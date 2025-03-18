@@ -18686,7 +18686,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 .collapse-list .nav .nav-link:hover, .collapse-list .nav .nav-link:focus {
-  color: #0555a1;
+  color: #71C5E8; /* was #0555a1; */
 }
 
 .nav-pills .nav-link {
