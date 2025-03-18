@@ -96,8 +96,8 @@
   --bs-tertiary-bg: #f5f7f9;
   --bs-tertiary-bg-rgb: 245, 247, 249;
   --bs-heading-color: var(--bs-gray-800);
-  --bs-link-color: #066ac9;
-  --bs-link-color-rgb: 6, 106, 201;
+  --bs-link-color: #71C5E8; /* was #066ac9 */
+  --bs-link-color-rgb: 93, 198, 233; /* was 6, 106, 201 */
   --bs-link-decoration: none;
   --bs-link-hover-color: #71C5E8; /* was #0555a1; */
   --bs-link-hover-color-rgb: 93, 198, 233; /* was 5, 85, 161; */
