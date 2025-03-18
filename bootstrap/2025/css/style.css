@@ -4681,7 +4681,7 @@ textarea.form-control-lg {
   --bs-navbar-color: var(--bs-gray-600);
   --bs-navbar-hover-color: var(--bs-info); /* #71C5E8;  adjusted from #066ac9 to Mac Sky Blue */
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
-  --bs-navbar-active-color: #71C5E8; /* adjusted from #066ac9 to Mac Sky Blue */
+  --bs-navbar-active-color: var(--bs-info); /* #71C5E8; adjusted from #066ac9 to Mac Sky Blue */
   --bs-navbar-brand-padding-y: 30px;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 0;
