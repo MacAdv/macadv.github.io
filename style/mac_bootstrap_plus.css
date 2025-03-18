@@ -5,7 +5,7 @@
 
 div#ui-datepicker-div {
     border: 2px solid;
-    padding: 5px;
+    padding: 2px 15px 5px 5px;
     background: white !important;
 }
 
