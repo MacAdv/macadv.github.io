@@ -9,6 +9,15 @@ div#ui-datepicker-div {
     background: white !important;
 }
 
+span.ui-icon.ui-icon-circle-triangle-w, span.ui-icon.ui-icon-circle-triangle-e {
+    text-indent: -0px !important;
+    padding: 0px;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    text-indent: 0px !important;
+}
+
 .nav-item{
     color: var(--bs-white) !important;
 }
