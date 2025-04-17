@@ -19,5 +19,5 @@ span.ui-icon.ui-icon-circle-triangle-w, span.ui-icon.ui-icon-circle-triangle-e {
 }
 
 .nav-item{
-    color: var(--bs-white) !important;
+    color: var(---bs-gray-300) !important;
 }
