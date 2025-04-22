@@ -238,3 +238,47 @@ $(() => {
         }
     }
 });
+
+
+/**
+ * Initializes lazy loading for images with the class 'lazy-img'.
+ * This function uses the IntersectionObserver API to load images only when they are about to enter the viewport.
+ * If the IntersectionObserver API is not supported, it falls back to immediately loading all images.
+ *
+ * @param {HTMLElement} [context=document] - The context within which to search for lazy images. Defaults to the entire document.
+ * @example
+ * // Initialize lazy loading for images within a specific table
+ * initLazyImages(document.querySelector('#studentSearchTable'));
+ */
+function initLazyImages(context = document) {
+    const lazyImages = context.querySelectorAll('img.lazy-img');
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const realSrc = img.getAttribute('data-src');
+                    if (realSrc) {
+                        img.src = realSrc;
+                        img.removeAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: "100px 0px",
+            threshold: 0.01
+        });
+
+        lazyImages.forEach(img => observer.observe(img));
+    } else {
+        lazyImages.forEach(img => {
+            const realSrc = img.getAttribute('data-src');
+            if (realSrc) {
+                img.src = realSrc;
+                img.removeAttribute('data-src');
+            }
+        });
+    }
+}
