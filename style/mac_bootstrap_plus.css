@@ -21,3 +21,11 @@ span.ui-icon.ui-icon-circle-triangle-w, span.ui-icon.ui-icon-circle-triangle-e {
 .nav-item {
     color: var(--bs-gray-300) !important;
 }
+
+.lazy-img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.lazy-img[src*="banner_support/photos"] {
+    opacity: 1;
+}
