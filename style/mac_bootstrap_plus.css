@@ -1,3 +1,27 @@
+/* Override Slate's col-1 styling */
+.part_rows_container.col-1 {
+    width: 100%;
+    /* Expand to full width */
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#portal_row_container {
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+#main-content {
+    min-height: 70vh;
+    /* Ensure visible content space */
+}
+
+
 .dt-search {
     padding: 0px 10px;
     min-width: 350px;
