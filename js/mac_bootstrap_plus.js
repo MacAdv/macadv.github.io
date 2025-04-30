@@ -151,36 +151,6 @@ function setupTabListeners() {
     });
 }
 
-
-// Initialize the first tab based on the URL or restore from storage
-$(document).ready(() => {
-    const decodeQueryString = (query) => {
-        return query.split('&').reduce((acc, pair) => {
-            const [key, value] = pair.split('=');
-            acc[decodeURIComponent(key)] = decodeURIComponent(value || '');
-            return acc;
-        }, {});
-    };
-
-    const qs = decodeQueryString(location.search.substring(1));
-
-    if (qs["tab"]) {
-        loadTab(qs["tab"], location.search.substring(1));
-    } else {
-        // Set the default tab to the first sidebar link if no tab is specified in the URL.
-        const defaultTab = $("#navbar-sidebar a").first().data("tab");
-        if (defaultTab) {
-            loadTab(defaultTab, location.search.substring(1));
-        }
-    }
-});
-
-
-
-
-
-
-
 // Listen for browser back/forward events and reload the state
 $(window).on("popstate", (e) => {
     if (e.originalEvent.state) {
@@ -214,29 +184,6 @@ $(document).on("click", ".load-content", function (e) {
 
     // Load the specified tab with the data attributes as query string parameters
     loadTab(tab, queryString, false);
-});
-
-// Initialize the first tab based on the URL or default to the first tab
-$(() => {
-    const decodeQueryString = (query) => {
-        return query.split('&').reduce((acc, pair) => {
-            const [key, value] = pair.split('=');
-            acc[decodeURIComponent(key)] = decodeURIComponent(value || '');
-            return acc;
-        }, {});
-    };
-
-    const qs = decodeQueryString(location.search.substring(1));
-    if (qs["tab"]) {
-        loadTab(qs["tab"], location.search.substring(1));
-    } else {
-        // Set the default tab to the first link in the sidebar if no tab is specified in the URL.
-        const defaultTab = $("#navbar-sidebar a").first().data("tab")
-        console.log(defaultTab);
-        if (defaultTab) {
-            loadTab(defaultTab, location.search.substring(1));
-        }
-    }
 });
 
 
@@ -282,3 +229,28 @@ function initLazyImages(context = document) {
         });
     }
 }
+
+
+// Initialize the first tab based on the URL or default to the first tab
+$(() => {
+    const decodeQueryString = (query) => {
+        return query.split('&').reduce((acc, pair) => {
+            const [key, value] = pair.split('=');
+            acc[decodeURIComponent(key)] = decodeURIComponent(value || '');
+            return acc;
+        }, {});
+    };
+
+    const qs = decodeQueryString(location.search.substring(1));
+    if (qs["tab"]) {
+        loadTab(qs["tab"], location.search.substring(1));
+    } else {
+        // Set the default tab to the first link in the sidebar if no tab is specified in the URL.
+        const defaultTab = $("#navbar-sidebar a").first().data("tab")
+        console.log(defaultTab);
+        if (defaultTab) {
+            loadTab(defaultTab, location.search.substring(1));
+        }
+    }
+});
+
