@@ -271,11 +271,12 @@ $('#siteModal').on('show.bs.modal', function (event) {
     // Load content
     $(target).html("Loading...");
     if (url) {
-        $.get(url, function (data) {
-            $(target).html(data);
-        }).fail(function () {
-            $(target).html("<p>Error loading content. Please try again.</p>");
-        });
+        loadSlatePortalContent(url, target);
+        // $.get(url, function (data) {
+        //     $(target).html(data);
+        // }).fail(function () {
+        //     $(target).html("<p>Error loading content. Please try again.</p>");
+        // });
     } else {
         $(target).html("<p>No content URL provided.</p>");
     }
