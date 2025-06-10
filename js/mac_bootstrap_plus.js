@@ -254,3 +254,48 @@ $(() => {
     }
 });
 
+
+/**
+ * Global click handler to open the Bootstrap #siteModal and dynamically load content via AJAX.
+ *
+ * This enables buttons or links (even those loaded via AJAX) to open the modal
+ * and inject remote content from a URL into a specified modal target element.
+ *
+ * Usage:
+ * <button class="open-site-modal"
+ *         data-url="?cmd=edit_protocol&protocol_id=123"
+ *         data-title="Edit Protocol"
+ *         data-target="#form_div">
+ *    Edit
+ * </button>
+ *
+ * Required data attributes:
+ * - data-url: URL to fetch and inject into the modal (via GET)
+ * 
+ * Optional data attributes:
+ * - data-title: Modal title text
+ * - data-target: Selector inside the modal where content should be inserted (default: "#form_div")
+ */
+$(document).on("click", ".open-site-modal", function (e) {
+    e.preventDefault();
+
+    const $button = $(this);
+    const url = $button.data("url");
+    const title = $button.data("title") || "Details";
+    const target = $button.data("target") || "#form_div";
+
+    // Set modal title
+    $("#siteModalLabel").text(title);
+
+    // Show the modal
+    const modal = new bootstrap.Modal(document.getElementById('siteModal'));
+    modal.show();
+
+    // Load content via AJAX into the target container
+    $(target).html("Loading...");
+    $.get(url, function (data) {
+        $(target).html(data);
+    }).fail(function () {
+        $(target).html("<p>Error loading content. Please try again.</p>");
+    });
+});
