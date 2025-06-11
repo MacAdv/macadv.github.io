@@ -100,7 +100,7 @@ const loadTab = (tab, queryString, isBack) => {
  * @param {string} targetDivId - The ID of the div where the content should be displayed.
  */
 // Override loadSlatePortalContent to ensure active tab restoration after dynamic loading
-function loadSlatePortalContent(pageUrl, targetDivId) {
+function loadSlatePortalContent(pageUrl, targetDivId, callback) {
     $(targetDivId).html("<div>loading...</div>");
 
     $.ajax({
@@ -116,6 +116,9 @@ function loadSlatePortalContent(pageUrl, targetDivId) {
             // Ensure the active tab is restored after the content is inserted
             restoreActiveTab();
             setupTabListeners(); // Re-bind event listeners for the dynamically injected tabs
+
+             // Run the callback AFTER content is loaded
+            if (typeof callback === 'function') callback();
         },
         error: function (xhr, textStatus, errorThrown) {
             if (xhr.status === 302 || xhr.status === 401) {
@@ -127,6 +130,21 @@ function loadSlatePortalContent(pageUrl, targetDivId) {
         }
     });
 }
+
+function initializeDefaultTabIfNeeded() {
+    const qs = new URLSearchParams(window.location.search);
+    if (!qs.has("tab")) {
+        const $firstLink = $("#navbar-sidebar a.load-content").first();
+        const tab = $firstLink.data("tab");
+        const dataAttributes = $firstLink.data();
+        const queryString = $.param(dataAttributes);
+
+        if (tab) {
+            loadTab(tab, queryString);
+        }
+    }
+}
+
 
 
 // Function to restore the last active tab
