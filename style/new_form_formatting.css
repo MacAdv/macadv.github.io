@@ -74,6 +74,7 @@
   .form_label{
     color: var(--mac_blue);
     font-family: var(--bodycopy_style);
+    font-weight: bold;
   }
   div.form_header .form_label {
     background-color: var(--mac_sheer_gray);
