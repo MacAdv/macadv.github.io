@@ -73,7 +73,7 @@
   }
   .form_label{
     color: var(--mac_blue);
-    font-family: var(--heading_style_medium);
+    font-family: var(--bodycopy_style);
   }
   div.form_header .form_label {
     background-color: var(--mac_sheer_gray);
