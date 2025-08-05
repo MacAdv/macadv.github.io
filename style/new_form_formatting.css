@@ -30,7 +30,7 @@
   }
   * {
     line-height: 24px;
-    font-family: var(--bodycopy_style);
+    font-family: var(--bodycopy_style) !important;
     /* color: var(--mac_black); */
   }
   #content {
