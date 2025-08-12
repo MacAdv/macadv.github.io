@@ -40,6 +40,51 @@
 
 
 
+.progress-bar {
+    color: var(--primary-lc-white);
+    background-color: var(--primary-lc-gray);
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    padding: 3px 0px;
+}
+
+.grey-progress-bar {
+    color: #000 !important;
+    background-color: #f1f1f1;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+.green-progress-bar {
+    background-color: var(--secondary-lc-dark-green);
+    padding: 4px;
+}
+
+.progress-bar-orange {
+    background-color: var(--primary-lc-orange);
+    padding: 4px;
+}
+
+.-progress-bar-light-blue {
+    background-color: var(--secondary-lc-light-blue);
+    padding: 10px;
+}
+.progress-label {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.ofGoalText {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 15px;
+}
+
+
+
+
 /* the main headline styles */
 
 
