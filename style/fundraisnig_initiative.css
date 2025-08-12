@@ -1,0 +1,329 @@
+
+:root {
+  /** Colors **/
+  --mac_blue: #01426A;
+  --mac_light_blue: #72c5e7;
+  --mac_sheer_blue: #E3F2FA;
+  --mac_orange: #D44420;
+  --mac_sheer_gray: #E9EBEB;
+  --mac_light_gray: #A5ADAF;
+  --mac_gray: #5B6770;
+  --mac_white: #ffffff;
+  --mac_black: #181A1B;
+  /** Fonts **/
+  --heading_style_light: NewslabLight;
+  --heading_style_medium: NewslabMedium;
+  --bodycopy_style: DIN Next W01 Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
+  --bodycopy_weight: normal;
+  --title_size: 3rem;
+  --h1_size: 1.4rem;
+  --h2_size: 1.2rem;
+  --p_size: 1rem;
+  --sub_size: 0.9rem;
+  /** Border **/
+  --border_gray: 1px solid var(--mac_gray);
+  --border_sheer_gray: 1px solid var(--mac_sheer_gray);
+  --border_radius: 5px;
+}
+
+
+/* the main headline styles */
+
+
+
+/* menu tabs styles ... */
+
+/* the overview/main container and its elements */
+
+div.part.overview {
+    box-shadow: 0 0 9px rgba(53, 61, 72, 0.25);
+    border-radius: 9px;
+    padding: 20px 15px;
+}
+
+div.part.overview div#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#wrapper>div {
+    flex: auto;
+}
+
+div#wrapper>div.fullWidth {
+    flex-basis: 100%;
+}
+
+div#wrapper>div.centered {
+    text-align: center;
+}
+
+div#wrapper>div#video {
+    flex: 0 1 60%;
+    align-self: center;
+}
+
+div#wrapper>div#aside {
+    flex: 0 1 35%;
+    padding: 5px;
+    align-self: center;
+}
+
+/* mobile adjustments */
+@media only screen and (max-width: 615px) {
+    div#wrapper>div {
+        flex-basis: 100% !important;
+    }
+
+}
+
+.progress-bar {
+    color: var(--mac_white);
+    background-color: var(--mac_light_gray);
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    padding: 3px 0px;
+}
+
+.grey-progress-bar {
+    color: #000 !important;
+    background-color: #f1f1f1;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+.green-progress-bar {
+    background-color: var(--mac_gray);
+    padding: 4px;
+}
+
+.progress-bar-orange {
+    background-color: var(--mac_blue);
+    padding: 4px;
+}
+
+.-progress-bar-light-blue {
+    background-color: var(--mac_light_blue);
+    padding: 10px;
+}
+.progress-label {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+
+.ofGoalText {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    padding-bottom: 15px;
+}
+
+/* main Give Now button */
+.give-button {
+    width: 50%;
+    background-color:var(--mac_blue);
+    color: white !important;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.give-button:hover {
+    background-color: var(--mac_light_gray) !important;
+}
+
+/* button */
+.button {
+    min-width: 250px;
+    background-color:var(--mac_blue);
+    color: white !important;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--mac_light_gray) !important;
+}
+
+.button.button-small {
+    font-size: .8em;
+    padding: 5px;
+    margin: 2px;
+    font-weight: lighter;
+    min-width: unset;
+}
+
+/* The tabs area ... */
+
+/* the content of the various tabs */
+/* About and Updates */
+
+/* goal Goals */
+.part.goals {
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+div.part.goals div.goal-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.goal-wrapper>div {
+    flex: 1 1 225px;
+}
+
+div.individual-goal {
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0 0 9px rgba(53, 61, 72, 0.15);
+    border-radius: 9px;
+    /* transition: all 0.5s ease; */
+}
+
+.individual-goal-title {
+    padding: 6px;
+    background: lightgray;
+    margin: -5px;
+    border-radius: 7px 7px 0px 0px;
+    font-size: 1.3em;
+}
+
+.individual-goal-goal {
+    padding: 11px 0px 0px;
+    font-size: 1.2em;
+}
+
+.individual-goal h2 {
+    font-size: 1.8em !important;
+}
+
+.individual-goal:hover {
+    box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15);
+}
+
+.individual-goal-nofloat:hover {
+    box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15);
+}
+
+/* buttons on the goal Goals tab */
+.give-goal-button {
+    width: 100%;
+    background-color: #00669e;
+    color: white !important;
+    padding: 9px 10px;
+    margin: 3px auto;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.give-goal-button:hover {
+    background-color: #80d2ff !important;
+}
+
+
+
+/* Donors tab */
+div.part.donors:not(.ten-recent) {
+    margin-bottom: 5px;
+}
+
+span.report_export {
+    display: none;
+}
+
+
+/* pop-up styling */
+
+
+#contentcontainter {
+    /* max-width: 1100px; */
+    width: 100%;
+    background: #FFF;
+    margin: 10px auto 0;
+    padding: 5px 0% 0px !important;
+    box-sizing: border-box;
+}
+
+#contentcontainter * {
+    box-sizing: border-box;
+}
+
+/* The actual Giving Form for the giving day portal - embedded form */
+/* the main floating container ... */
+.part.give-now-form {
+    max-width: 775px;
+    width: 100%;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 65px 5% 15px 5% !important;
+    box-shadow: 0 0 18px rgba(53, 61, 72, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* override styles for the main form title (H1) ... */
+form h1 {
+    font-size: 2.5em;
+    color: #00669e;
+    text-align: center;
+}
+
+/* ... and the H2-form elements */
+div.form_h2[data-type=h2] .form_label {
+    font-size: 1.75em;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--mac_gray);
+    text-align: left;
+    padding: 20px 0px !important;
+}
+
+/* styling input fields */
+
+/* the submit button */
+
+/* hover and focus for the submit button */
+form button.default:hover,
+form button.default:focus {
+    background-color: var(--mac_sheer_gray) !important;
+}
+
+/* form labels */
+
+div#card-location {
+    padding: 9px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+
+
+/* The Modal (background) */
+
+/* Modal Content */
+
+/* The Close Button */
+
+/* Add Animation */
