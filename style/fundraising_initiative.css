@@ -286,7 +286,7 @@ div#wrapper>div#aside {
 /* button */
 .button {
     min-width: 250px;
-    background-color:var(--mac_blue);
+    background-color:var(--mac_blue) !important;
     color: white !important;
     padding: 5px 10px;
     margin: 8px 0;
