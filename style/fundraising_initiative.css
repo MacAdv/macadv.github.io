@@ -931,8 +931,8 @@ div.announce_section {
     min-width: 250px; /* Optional: set a minimum width for items */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 320px; /* Set a fixed height */
+    justify-content: flex-start;
+    height: auto; /* Set a fixed height */
 }
 
 @media (max-width: 1000px) {
@@ -952,6 +952,7 @@ div.announce_section {
 .tiertwo_wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch; /* make all items in a row equal height */
     gap: 16px; /* Adjust the gap between items as needed */
 }
 
