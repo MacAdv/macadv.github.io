@@ -1,4 +1,3 @@
-
 :root {
   /** Colors **/
   --mac_blue: #01426A;
@@ -31,992 +30,324 @@
   --border_radius: 5px;
 }
 
-
-
-#contentcontainter .overview h2 {
-    font-size: 24px;
-    color: #555;
-}
-
-#contentcontainter .overview h3 {
-    font-size: 16px;
-    color: #555;
-    font-style: italic;
-}
-
-#contentcontainter .donors h2 {
-    font-size: 20px;
-    color: #00669e;
-    border-bottom: solid 1px #00669e26;
-    margin-bottom: 10px;
-}
-
-#contentcontainter .funds h2 {
-    font-size: 1.6em;
-    color: #555;
-    white-space: nowrap;
-}
-
+/* -----------------------
+   CONTENT HEADINGS
+------------------------ */
+#contentcontainter .overview h2 { font-size: 24px; color: #555; }
+#contentcontainter .overview h3 { font-size: 16px; color: #555; font-style: italic; }
+#contentcontainter .donors h2 { font-size: 20px; color: #00669e; border-bottom: solid 1px #00669e26; margin-bottom: 10px; }
+#contentcontainter .funds h2 { font-size: 1.6em; color: #555; white-space: nowrap; }
 
 html h1, html h2 {
-    margin-top: 25px;
-    margin-bottom: 4px;
-    color: var(--mac_blue) !important;
-    font-family: acumin-pro, sans-serif;
-    font-size: 3rem;
-    line-height: 1.25;
-    font-weight: lighter;
-    text-align: center !important;
-    display: block;
-}
-/* #page * {box-sizing: border-box;} */
-
-
-
-/* menu tabs styles ... */
-#contentcontainter #menuTabsWrapper {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 4px;
+  color: var(--mac_blue) !important;
+  font-family: acumin-pro, sans-serif;
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: lighter;
+  text-align: center !important;
+  display: block;
 }
 
+/* -----------------------
+   MENU TABS
+------------------------ */
+#contentcontainter #menuTabsWrapper { width: 100%; max-width: 1100px; margin: 0 auto; }
 #contentcontainter ul.menuTabs {
-    list-style: none;
-    margin: 1em 0 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  list-style: none; margin: 1em 0 0; padding: 0; width: 100%;
+  display: flex; flex-wrap: wrap;
 }
-
-#contentcontainter ul.menuTabs li {
-    display: inline-block;
-    vertical-align: bottom;
-    margin: 0 0 -1px;
-    padding: 0;
-    flex: 25% 1 1;
-}
-
-#contentcontainter ul.menuTabs li.fullWidth {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-#contentcontainter ul.menuTabs li.fullWidth a {
-    display: block;
-    margin: 3px;
-    text-align: center;
-}
-
+#contentcontainter ul.menuTabs li { display: inline-block; vertical-align: bottom; margin: 0 0 -1px; padding: 0; flex: 25% 1 1; }
+#contentcontainter ul.menuTabs li.fullWidth { display: inline-block; margin: 0; padding: 0; width: 100%; }
+#contentcontainter ul.menuTabs li.fullWidth a { display: block; margin: 3px; text-align: center; }
 #contentcontainter ul.menuTabs li a {
-    height: auto;
-    font-size: 18px;
-    color: #555 !important;
-    border-radius: 5px;
-    display: block;
-    font-weight: bold;
-    margin: 3px 3px 3px 0px;
-    padding: 11px 5px;
-    text-decoration: none;
-    text-align: center;
-    line-height: 28px;
-    background: #f1f1f1;
-    white-space: nowrap;
+  height: auto; font-size: 18px; color: #555 !important; border-radius: 5px; display: block; font-weight: bold;
+  margin: 3px 3px 3px 0px; padding: 11px 5px; text-decoration: none; text-align: center; line-height: 28px; background: #f1f1f1; white-space: nowrap;
 }
-
 #contentcontainter ul.menuTabs li a.active,
 #contentcontainter ul.menuTabs li a:hover {
-    background-color: #fff;
-    color: #00669e !important;
-    border: 1px solid #00669e;
-    border-radius: 5px 5px 0 0;
+  background-color: #fff; color: #00669e !important; border: 1px solid #00669e; border-radius: 5px 5px 0 0;
 }
-
 #contentcontainter ul.menuTabs li a[data-tab='Funds'].active,
-#contentcontainter ul.menuTabs li a[data-tab='Funds']:hover {
-    margin-right: 0px;
-}
+#contentcontainter ul.menuTabs li a[data-tab='Funds']:hover { margin-right: 0px; }
 
 #contentcontainter {
-    background: white;
-    padding: 15px 10px 5px;
-    box-shadow: 0 0 9px rgba(53, 61, 72, 0.25);
-    /* max-width: 1100px; */
-    margin: -3px auto 0;
+  background: white; padding: 15px 10px 5px; box-shadow: 0 0 9px rgba(53, 61, 72, 0.25);
+  /* max-width: 1100px; */ margin: -3px auto 0;
 }
 
 @media only screen and (min-width: 615px) {
-
-    /* setting the background for the tabbed section */
-    #contentcontainter {
-        background: linear-gradient(180deg, #fff 902px, #f1f1f1 0);
-    }
-
-    div.part.giving-tabs {
-        background: #f1f1f1;
-    }
-
-    /* fading side border colors */
-    .wrap-content-body {
-        background: linear-gradient(180deg, #00669e 30%, transparent 60%);
-        padding: 0 1px;
-        border-radius: 4px;
-    }
-
-    #contentcontainter {
-        border-top: 1px solid var(--mac_blue);
-    }
-
-    #contentcontainter ul.menuTabs li a.active,
-    #contentcontainter ul.menuTabs li a:hover {
-        border-bottom: 1px solid #fff;
-    }
+  #contentcontainter { background: linear-gradient(180deg, #fff 902px, #f1f1f1 0); border-top: 1px solid var(--mac_blue); }
+  div.part.giving-tabs { background: #f1f1f1; }
+  .wrap-content-body { background: linear-gradient(180deg, #00669e 30%, transparent 60%); padding: 0 1px; border-radius: 4px; }
+  #contentcontainter ul.menuTabs li a.active,
+  #contentcontainter ul.menuTabs li a:hover { border-bottom: 1px solid #fff; }
 }
 
-/* the overview/main container and its elements */
-div.part.overview {
-    box-shadow: 0 0 9px rgba(53, 61, 72, 0.25);
-    border-radius: 9px;
-    padding: 20px 15px;
-}
+/* -----------------------
+   OVERVIEW
+------------------------ */
+div.part.overview { box-shadow: 0 0 9px rgba(53, 61, 72, 0.25); border-radius: 9px; padding: 20px 15px; }
 
-div.part.overview div#wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
+div.part.overview div#wrapper { display: flex; flex-wrap: wrap; }
 
-div#wrapper>div {
-    flex: auto;
-}
+div#wrapper > div { flex: auto; }
 
-div#wrapper>div.fullWidth {
-    flex-basis: 100%;
-}
+div#wrapper > div.fullWidth { flex-basis: 100%; }
 
-div.centered {
-    text-align: center;
-    font-size: 1.7rem;
-}
+div.centered { text-align: center; font-size: 1.7rem; }
 
-div#wrapper>div#video {
-    flex: 0 1 60%;
-    align-self: center;
-}
+div#wrapper > div#video { flex: 0 1 60%; align-self: center; }
 
-div#wrapper>div#aside {
-    flex: 0 1 35%;
-    padding: 5px;
-    align-self: center;
-}
+div#wrapper > div#aside { flex: 0 1 35%; padding: 5px; align-self: center; }
 
-/* mobile adjustments */
 @media only screen and (max-width: 615px) {
-    div#wrapper>div {
-        flex-basis: 100% !important;
-    }
-
-    #contentcontainter ul.menuTabs li {
-        flex-basis: 50% !important;
-    }
+  div#wrapper > div { flex-basis: 100% !important; }
+  #contentcontainter ul.menuTabs li { flex-basis: 50% !important; }
 }
 
-.progress-bar {
-    color: var(--mac_white) !important;
-    background-color: var(--mac_gray);
-    margin-top: 16px !important;
-    margin-bottom: 16px !important;
-    padding: 3px 0px;
-}
+/* -----------------------
+   GENERIC PROGRESS BARS
+------------------------ */
+.progress-bar { color: var(--mac_white) !important; background-color: var(--mac_gray); margin: 16px 0 !important; padding: 3px 0; }
+.grey-progress-bar { color: #000 !important; background-color: #f1f1f1; margin: 16px 0 !important; }
+.green-progress-bar { background-color: var(--mac_secondary_green); padding: 10px; }
+.progress-bar-orange { background-color: var(--mac_blue); padding: 10px; }
+/* Preserving original class despite leading hyphen */
+.-progress-bar-light-blue { background-color: var(--mac_secondary_sky_blue); padding: 10px; }
+.progress-label { margin: 0 auto; width: 90%; text-align: center; }
+.ofGoalText { font-size: 12px; font-weight: bold; color: #555; padding-bottom: 15px; }
 
-.grey-progress-bar {
-    color: #000 !important;
-    background-color: #f1f1f1;
-    margin-top: 16px !important;
-    margin-bottom: 16px !important;
-}
-
-.green-progress-bar {
-    background-color: var(--mac_secondary_green);
-    padding: 10px;
-}
-
-.progress-bar-orange {
-    background-color: var(--mac_blue);
-    padding: 10px;
-}
-
-.-progress-bar-light-blue {
-    background-color: var(--mac_secondary_sky_blue);
-    padding: 10px;
-}
-.progress-label {
-    margin: 0 auto;
-    width: 90%;
-    text-align: center;
-}
-
-.ofGoalText {
-    font-size: 12px;
-    font-weight: bold;
-    color: #555;
-    padding-bottom: 15px;
-}
-
-/* main Give Now button */
+/* -----------------------
+   BUTTONS
+------------------------ */
 .give-button {
-    width: 50%;
-    background-color:var(--mac_blue);
-    color: white !important;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 25px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
+  width: 50%; background-color: var(--mac_blue); color: white !important; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 5px;
+  font-size: 25px; display: inline-block; text-align: center; text-decoration: none;
 }
+.give-button:hover { background-color: var(--mac_gray) !important; }
 
-.give-button:hover {
-    background-color: var(--mac_gray) !important;
-}
-
-/* button */
 .button {
-    min-width: 250px;
-    background-color:var(--mac_blue) !important;
-    color: white !important;
-    padding: 5px 10px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 25px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
+  min-width: 250px; background-color: var(--mac_blue) !important; color: white !important; padding: 5px 10px; margin: 8px 0; border: none; border-radius: 5px;
+  font-size: 25px; display: inline-block; text-align: center; text-decoration: none;
 }
+/* Fixed var name: was --mac_grayy */
+.button:hover { background-color: var(--mac_gray) !important; }
+.button.button-small { font-size: .8em; padding: 2px; margin: 2px; font-weight: lighter; }
 
-.button:hover {
-    background-color: var(--mac_grayy) !important;
-}
+/* -----------------------
+   GOALS GRID
+------------------------ */
+div.part.goals div.goal-wrapper { display: flex; flex-wrap: wrap; }
+div.goal-wrapper > div { flex: 1 1 225px; }
 
-.button.button-small {
-    font-size: .8em;
-    padding: 2px;
-    margin: 2px;
-    font-weight: lighter;
-}
+div.individual-goal { margin: 10px 5px; padding: 15px; box-shadow: 0 0 9px rgba(53, 61, 72, 0.15); border-radius: 9px; transition: all 0.5s ease; }
+.individual-goal h2 { font-size: 1.8em !important; }
+.individual-goal:hover { box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15); }
+.individual-goal-nofloat:hover { margin-top: 10px !important; box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15); }
 
-/* goal Goals */
-div.part.goals div.goal-wrapper {display: flex;flex-wrap: wrap;}
-div.goal-wrapper>div {flex: 1 1 225px;}
-
-div.individual-goal {
-    margin: 10px 5px;
-    padding: 15px;
-    box-shadow: 0 0 9px rgba(53, 61, 72, 0.15);
-    border-radius: 9px;
-    transition: all 0.5s ease;
-}
-
-.individual-goal h2 {
-    font-size: 1.8em !important;
-}
-
-.individual-goal:hover {
-    /* margin-top: -2px; */
-    box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15);
-}
-
-.individual-goal-nofloat:hover {
-    margin-top: 10px !important;
-    box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15);
-}
-
-/* buttons on the goal Goals tab */
 .give-goal-button {
-    width: 100%;
-    background-color: #00669e;
-    color: white !important;
-    padding: 9px 10px;
-    margin: 3px auto;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
+  width: 100%; background-color: #00669e; color: white !important; padding: 9px 10px; margin: 3px auto; border: none; border-radius: 4px; font-size: 14px; font-weight: bold; display: inline-block; text-align: center; text-decoration: none;
 }
+.give-goal-button:hover { background-color: #80d2ff !important; }
 
-.give-goal-button:hover {
-    background-color: #80d2ff !important;
-}
+/* -----------------------
+   DONORS TAB
+------------------------ */
+div.part.donors:not(.ten-recent) { margin-bottom: 5px; }
+span.report_export { display: none; }
+table.report_chart thead th, div.report_row table thead th { display: none; }
+table.report_chart tbody tr td { border: none !important; }
+.report_rows_static tr.header > th { background: #f1f1f1; }
 
+/* -----------------------
+   DIALOG / MODAL
+------------------------ */
+.supports-boxshadow .dialog_host .dialog { border-radius: 9px; }
+.dialog .header { background: #f1f1f1; color: #555; }
+.dialog .part.give-now-form { margin-bottom: 0px; }
+.dialog .part.give-now-form div.action { border-top: 1px solid #f9f9f9; padding: 5px 10px; }
 
+/* -----------------------
+   CONTENT CONTAINER
+------------------------ */
+#contentcontainter > table.fixed > tbody > tr > td { padding: 0px !important; }
+#contentcontainter { width: 100%; background: #FFF; margin: 10px auto 0; padding: 5px 0% 0px !important; box-sizing: border-box; }
+#contentcontainter * { box-sizing: border-box; }
 
-/* Donors tab */
-div.part.donors:not(.ten-recent) {
-    margin-bottom: 5px;
-}
-
-span.report_export {
-    display: none;
-}
-
-table.report_chart thead th,
-div.report_row table thead th {
-    display: none;
-}
-
-table.report_chart tbody tr td {
-    border: none !important;
-}
-
-.report_rows_static tr.header>th {
-    background: #f1f1f1;
-}
-
-/* pop-up styling */
-.supports-boxshadow .dialog_host .dialog {
-    border-radius: 9px;
-}
-
-.dialog .header {
-    background: #f1f1f1;
-    color: #555;
-}
-
-.dialog .part.give-now-form {
-    margin-bottom: 0px;
-}
-
-.dialog .part.give-now-form div.action {
-    border-top: 1px solid #f9f9f9;
-    padding: 5px 10px;
-}
-
-#contentcontainter>table.fixed>tbody>tr>td {
-    padding: 0px !important;
-}
-
-#contentcontainter {
-    /* max-width: 1100px; */
-    width: 100%;
-    background: #FFF;
-    margin: 10px auto 0;
-    padding: 5px 0% 0px !important;
-    box-sizing: border-box;
-}
-
-#contentcontainter * {
-    box-sizing: border-box;
-}
-
-/* The actual Giving Form for the giving day portal - embedded form */
-/* the main floating container ... */
+/* -----------------------
+   EMBEDDED GIVE FORM
+------------------------ */
 .part.give-now-form {
-    max-width: 775px;
-    width: 100%;
-    background: #FFF;
-    margin: 0 auto;
-    padding: 65px 5% 15px 5% !important;
-    box-shadow: 0 0 18px rgba(53, 61, 72, 0.25);
-    border-radius: 10px;
-    box-sizing: border-box;
+  max-width: 775px; width: 100%; background: #FFF; margin: 0 auto; padding: 65px 5% 15px 5% !important;
+  box-shadow: 0 0 18px rgba(53, 61, 72, 0.25); border-radius: 10px; box-sizing: border-box;
 }
+form h1 { font-size: 2.5em; color: #00669e; text-align: center; }
 
-/* override styles for the main form title (H1) ... */
-form h1 {
-    font-size: 2.5em;
-    color: #00669e;
-    text-align: center;
-}
+div.form_h2[data-type=h2] .form_label { font-size: 1.75em; font-weight: bold; font-style: italic; color: var(--mac_secondary_green); text-align: left; padding: 20px 0px !important; }
 
-/* ... and the H2-form elements */
-div.form_h2[data-type=h2] .form_label {
-    font-size: 1.75em;
-    font-weight: bold;
-    font-style: italic;
-    color: var(--mac_secondary_green);
-    text-align: left;
-    padding: 20px 0px !important;
-}
-
-/* styling input fields */
 .form_container input:not([type="checkbox"]):not([type="radio"]),
 .form_container select,
 .form_container textarea {
-    font-size: 16px;
-    padding: 9px;
-    margin: 6px 0 4px;
-    border: 1px solid #ccc;
-    color: #000;
-    font-family: sans-serif;
-    line-height: normal;
-    box-sizing: border-box;
-    border-radius: 3px;
+  font-size: 16px; padding: 9px; margin: 6px 0 4px; border: 1px solid #ccc; color: #000; font-family: sans-serif; line-height: normal; box-sizing: border-box; border-radius: 3px;
 }
+.form_container select { background-color: #f1f1f1; }
+.form_container input:not([type="checkbox"]):not([type="radio"]), .form_container textarea { width: 100%; }
+.form_container select:not([aria-label="Month"]):not([aria-label="Day"]):not([aria-label="Year"]):not([aria-label^="Recurring"]) { width: 100%; }
+.form_container textarea { min-height: 100px; resize: vertical; }
+.form_container input:focus, .form_container select:focus, .form_container textarea:focus { background: #f9f9f9 !important; }
+.form_container fieldset .form_response { padding: 2px 0; }
 
-.form_container select {
-    background-color: #f1f1f1;
-}
-
-.form_container input:not([type="checkbox"]):not([type="radio"]),
-.form_container textarea {
-    width: 100%;
-}
-
-.form_container select:not([aria-label="Month"]):not([aria-label="Day"]):not([aria-label="Year"]):not([aria-label^="Recurring"]) {
-    width: 100%;
-}
-
-.form_container textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.form_container input:focus,
-.form_container select:focus,
-.form_container textarea:focus {
-    background: #f9f9f9 !important;
-}
-
-.form_container fieldset .form_response {
-    padding: 2px 0;
-}
-
-/* the submit button */
-form button.default {
-    width: 99%;
-    background-color: var(--mac_blue);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    font-size: 20px;
-}
-
-/* hover and focus for the submit button */
+form button.default { width: 99%; background-color: var(--mac_blue); color: white; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; font-size: 20px; }
 form button.default:hover,
-form button.default:focus {
-    background-color: var(--mac_light_blue) !important;
-}
+form button.default:focus { background-color: var(--mac_light_blue) !important; }
 
-/* form labels */
-.form_container .form_label {
-    font-size: 16px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form_question.form_payment>label {
-    padding-top: 15px !important;
-}
-
+.form_container .form_label { font-size: 16px; font-weight: bold; color: #555; }
+.form_question.form_payment > label { padding-top: 15px !important; }
 .form_container div.form_question:not(.form_payment):not(.form_h2):not(.form_p) .form_label,
-.form_container div.form_question:not(.form_payment):not(.form_h2):not(.form_p) label {
-    vertical-align: middle !important;
-}
+.form_container div.form_question:not(.form_payment):not(.form_h2):not(.form_p) label { vertical-align: middle !important; }
 
-/* inside the payment widget */
-#payment_form th,
-label[for='recurring'],
-#recurring_questions tr>td:first-child {
-    font-weight: bold;
-    color: #555;
-}
+#payment_form th, label[for='recurring'], #recurring_questions tr > td:first-child { font-weight: bold; color: #555; }
+#payment_form table.plain col:first-of-type { width: 175px !important; }
+#payment_form table.plain #displayAmount { font-size: 16px; color: #555; }
 
-#payment_form table.plain col:first-of-type {
-    width: 175px !important;
-}
+div#card-location { padding: 9px; margin: 6px 0 4px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 3px; }
 
-#payment_form table.plain #displayAmount {
-    font-size: 16px;
-    color: #555;
-}
-
-div#card-location {
-    padding: 9px;
-    margin: 6px 0 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 3px;
-}
-
-
-/* replicate block links ... */
-a:link.replicate_insert {
-    color: #00669e;
-    text-decoration: underline;
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 8px;
-}
-
-a:hover.replicate_insert,
-a:hover.replicate_delete {
-    color: #72a130 !important;
-}
-
-.replicate_destination tr.column>th a:link {
-    color: #00669e;
-    text-decoration: underline;
-}
-
-/* ... and headers */
-.replicate_destination tr.column {
-    font-weight: bold;
-    color: #555;
-    padding: 4px 5px !important;
-    background-color: #fff;
-    border-bottom: 1px solid #f3f3f3;
-}
-
-.replicate_destination tr.column th {
-    background-color: #fff;
-}
-
-.replicate_insert_container td {
-    padding: 8px 0 !important;
-}
+/* -----------------------
+   REPLICATE BLOCKS
+------------------------ */
+a:link.replicate_insert { color: #00669e; text-decoration: underline; font-size: 14px; font-weight: bold; padding-left: 8px; }
+a:hover.replicate_insert, a:hover.replicate_delete { color: #72a130 !important; }
+.replicate_destination tr.column > th a:link { color: #00669e; text-decoration: underline; }
+.replicate_destination tr.column { font-weight: bold; color: #555; padding: 4px 5px !important; background-color: #fff; border-bottom: 1px solid #f3f3f3; }
+.replicate_destination tr.column th { background-color: #fff; }
+.replicate_insert_container td { padding: 8px 0 !important; }
 
 @media only screen and (max-width: 736px) {
-    .replicate_destination tr.column {
-        display: grid;
-    }
-
-    #payment_form th,
-    #recurring_questions tr>td:first-child {
-        background-color: #f3f3f3;
-    }
+  .replicate_destination tr.column { display: grid; }
+  #payment_form th, #recurring_questions tr > td:first-child { background-color: #f3f3f3; }
 }
 
-/* styling for the modal functionality */
-#myBtn {
-    margin-left: 150px;
-    border-radius: 2px;
+/* -----------------------
+   MODAL
+------------------------ */
+#myBtn { margin-left: 150px; border-radius: 2px; }
+@media only screen and (max-width: 480px) { #myBtn { margin-left: 0px; } }
+
+.modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.4); -webkit-animation-name: fadeIn; -webkit-animation-duration: 0.4s; animation-name: fadeIn; animation-duration: 0.4s; }
+.modal-content { position: fixed; bottom: 0; background-color: #fefefe; width: 100%; -webkit-animation-name: slideIn; -webkit-animation-duration: 0.4s; animation-name: slideIn; animation-duration: 0.4s; }
+.close { color: white; float: right; font-size: 22px; font-weight: bold; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.modal-header { padding: 7px 16px; background-color: #00669e; }
+.modal-header h2 { margin: 2px 0px; color: white; }
+.modal-body { padding: 12px 16px 50px; }
+@-webkit-keyframes slideIn { from { bottom: -300px; opacity: 0 } to { bottom: 0; opacity: 1 } }
+@keyframes slideIn { from { bottom: -300px; opacity: 0 } to { bottom: 0; opacity: 1 } }
+@-webkit-keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+
+/* -----------------------
+   ANNOUNCEMENTS
+------------------------ */
+div#announce-container { padding: 10px; border: solid 2px grey; border-radius: 4px; }
+div.announce_section { padding: 10px 0px; border-top: solid; }
+.announce_section_time { padding: 5px; background-color: slategray; color: white; }
+
+/* -----------------------
+   LAYOUT WRAPPER
+------------------------ */
+.wrap_content { width: 100%; max-width: 1325px; margin: 0 auto; padding: 0 20px; }
+
+.main_hero { /* display: flex; */ align-items: center; flex-direction: row; }
+.tier2_goal { width: 80%; margin: auto; }
+
+@media (max-width: 768px) {
+  .main_hero { flex-direction: column; align-items: center; }
+  .main_goal { width: 100%; padding-left: 0; text-align: center; }
+  .main_banner { width: 100%; margin-bottom: 20px; }
 }
 
-@media only screen and (max-width: 480px) {
-    #myBtn {
-        margin-left: 0px;
-    }
+.main_banner { flex-grow: 1; border-radius: 5px; }
+.main_goal {
+  font-size: 1.2rem; color: var(--mac_light_blue); display: flex; align-content: flex-start; justify-content: space-between; flex-wrap: wrap; padding-top: 20px;
 }
+@media (max-width: 768px) { .main_goal { padding-left: 0; } }
 
-/* The Modal (background) */
-.modal {
-    display: none;      /* Hidden by default */
-    position: fixed;    /* Stay in place */
-    z-index: 1;         /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;        /* Full width */
-    height: 100%;       /* Full height */
-    overflow: auto;     /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-    -webkit-animation-name: fadeIn;
-    /* Fade in the background */
-    -webkit-animation-duration: 0.4s;
-    animation-name: fadeIn;
-    animation-duration: 0.4s
-}
+/* -----------------------
+   GOAL STATS
+------------------------ */
+.goal_stat { display: flex; flex-direction: column; align-items: flex-start; flex-grow: 1; }
+.goal_stat_label { width: 100%; font-size: 3rem; }
+.goal_stat_label_tile { width: 100%; font-size: 1.4rem; }
 
-/* Modal Content */
-.modal-content {
-    position: fixed;
-    bottom: 0;
-    background-color: #fefefe;
-    width: 100%;
-    -webkit-animation-name: slideIn;
-    -webkit-animation-duration: 0.4s;
-    animation-name: slideIn;
-    animation-duration: 0.4s
-}
+.goal_stat#donor_count { order: 1; flex-basis: 40%; }
+.goal_stat#donor_count_number, .goal_stat#dollar_count_number { font-size: 4rem; font-weight: bold; color: var(--mac_blue); }
+.goal_stat#donor_count_label, .goal_stat#dollar_count_label { font-size: 4rem; font-weight: bold; color: var(--mac_blue) !important; margin-bottom: unset; }
 
-/* The Close Button */
-.close {
-    color: white;
-    float: right;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Some modal header and body overrides */
-.modal-header {
-    padding: 7px 16px;
-    background-color: #00669e;
-}
-
-.modal-header h2 {
-    margin: 2px 0px;
-    color: white;
-}
-
-.modal-body {
-    padding: 12px 16px 50px;
-}
-
-/* Add Animation */
-@-webkit-keyframes slideIn {from {bottom: -300px; opacity: 0 } to { bottom: 0; opacity: 1 } }
-@keyframes slideIn {from {bottom: -300px; opacity: 0} to {bottom: 0; opacity: 1} }
-@-webkit-keyframes fadeIn {from { opacity: 0    }to {opacity: 1}}
-@keyframes fadeIn {from { opacity: 0} to {opacity: 1}
-}
-
-
-
-
-
-div#announce-container {
-    padding: 10px;
-    border: solid 2px grey;
-    border-radius: 4px;
-}
-
-div.announce_section {
-    padding: 10px 0px;
-    border-top: solid;
-}
-.announce_section_time {
-    padding: 5px;
-    background-color: slategray;
-    color: white;
-}
-
-
-
-
-
-
-/*   MOVE Main Content to here */
-.wrap_content {
-    width: 100%;
-    max-width: 1325px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.main_hero {
-    /* display: flex; */
-    align-items: center;
-    flex-direction: row; /* Default: elements sit next to each other */
-}
-
-.tier2_goal {
-    width: 80%;
-    margin: auto;
-}
-
-@media (max-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
-    .main_hero {
-    flex-direction: column; /* Stack elements on top of each other */
-    align-items: center; /* Center align for better aesthetics */
-    }
-
-    .main_goal {
-    width: 100%; /* Ensure the goal section takes full width on mobile */
-    padding-left: 0; /* Remove left padding on mobile for better fit */
-    text-align: center; /* Center align content for better mobile presentation */
-    }
-
-    .main_banner {
-    width: 100%; /* Ensure the banner takes full width on mobile */
-    margin-bottom: 20px; /* Add spacing between banner and goal section */
-    }
-}
-
-.main_banner{
-    flex-grow: 1;
-    border-radius: 5px;
-}
-.main_goal{
-    font-size: 1.2rem;
-    color: var(--mac_light_blue);
-    display: flex;
-    align-content: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 20px;
-}
-
-@media (min-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
-    .main_goal{
-        /* width: 360px;
-        padding-left: 35px; */
-    }
-
-}
-@media (max-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
-    .main_goal{
-        padding-left: reset;
-    }
-}
-
-.goal_stat{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: 1;
-    /* margin-bottom: 10px; */
-}
-
-.goal_stat_label {
-    width: 100%;
-    font-size: 3rem;
-}
-.goal_stat_label_tile {
-    width: 100%;
-    font-size: 1.4rem;
-}
-
-.goal_stat#donor_count {
-    order: 1;
-    flex-basis: 40%;
-}
-.goal_stat#donor_count_number, 
-.goal_stat#dollar_count_number {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--mac_blue);
-}
-.goal_stat#donor_count_label, 
-.goal_stat#dollar_count_label {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--mac_blue) !important;
-    margin-bottom: unset;
-
-}
-
-.goal_stat#donor_count_progress_stat {
-    order: 2;
-    flex-basis: 60%;
-    text-align: right;
-    align-self: flex-end;
-}
-
+.goal_stat#donor_count_progress_stat { order: 2; flex-basis: 60%; text-align: right; align-self: flex-end; }
 .goal_stat#donor_count_progress_bar,
-.goal_stat#dollar_count_progress_bar   {
-    flex-basis: 100%;
-    height: 35px;
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-    margin: 15px 0px;
-}
-
-.goal_stat#donor_count_progress_bar  {
-    order: 3;
-}
-.goal_stat#donor_count_progress_bar_progress, 
-.goal_stat#dollar_count_progress_bar_progress{
-    min-width: 50px; 
-    background: var(--mac_blue);
-    /* margin-bottom: unset; */
-    padding: 3px
-}
-.goal_stat#dollar_count_progress_stat {
-    order: 7;
-    flex-basis: 60%;
-    text-align: right;
-    align-self: flex-end;
-}
-
-.goal_stat#dollar_count_progress_bar  {
-    order: 5;
-}
-
-.goal_stat_progress_label{
-    margin: 4px 0px auto;
-    width: 90%;
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-    font-weight: bold;
-    color: var(--mac_white);
-}
-
-.goal_stat#dollar_count {
-    order: 6;
-    flex-basis: 40%;
-}
-
+.goal_stat#dollar_count_progress_bar { flex-basis: 100%; height: 35px; border-radius: 3px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); overflow: hidden; margin: 15px 0px; }
+.goal_stat#donor_count_progress_bar { order: 3; }
+.goal_stat#donor_count_progress_bar_progress, .goal_stat#dollar_count_progress_bar_progress { min-width: 50px; background: var(--mac_blue); padding: 3px; }
+.goal_stat#dollar_count_progress_stat { order: 7; flex-basis: 60%; text-align: right; align-self: flex-end; }
+.goal_stat#dollar_count_progress_bar { order: 5; }
+.goal_stat_progress_label { margin: 4px 0px auto; width: 90%; text-align: center; font-size: 1em; font-weight: bold; color: var(--mac_white); }
+.goal_stat#dollar_count { order: 6; flex-basis: 40%; }
 
 .tile_hero .goal_stat#donor_count_progress_bar,
-.tile_hero .goal_stat#dollar_count_progress_bar {
-    height: 24px;
-}
-
-.tile_hero .goal_stat_progress_label {
-    font-size: 1em;
-    margin: 0px auto;
-}
-
+.tile_hero .goal_stat#dollar_count_progress_bar { height: 24px; }
+.tile_hero .goal_stat_progress_label { font-size: 1em; margin: 0px auto; }
 
 /* Parent Goals */
-
-.parent_goal .goal_stat#donor_count_label, 
-.parent_goal .goal_stat#dollar_count_label, 
-.parent_goal .goal_stat#dollar_count_number, 
+.parent_goal .goal_stat#donor_count_label,
+.parent_goal .goal_stat#dollar_count_label,
+.parent_goal .goal_stat#dollar_count_number,
 .parent_goal .goal_stat#donor_count_number,
-.parent_goal .goal_stat_label
-{
-    font-size: 1.6em;
-}
+.parent_goal .goal_stat_label { font-size: 1.6em; }
 
+#main_give { order: 8; flex-basis: 100%; }
 
-#main_give {
-    order: 8;
-    flex-basis: 100%;
-}
+.css_define_section { display: none; }
 
-
-.css_define_section{
-    display: none;
-}
-
-
+/* -----------------------
+   TIER TWO (Related Projects section)
+   - Consolidated & fixed to allow natural height growth.
+------------------------ */
 .tiertwo_title {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px;
-    min-height: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 1.5em; font-weight: bold; text-align: center; padding: 5px; min-height: 3em;
+  display: flex; align-items: center; justify-content: center;
 }
 
 /* Ensure images are centered and consistent */
-.tile_hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.tile_banner img {
-    max-width: 100%;
-    max-height: 200px; /* Adjust to fit inside tiles */
-    object-fit: contain; /* Ensure images scale properly */
-}
-
+.tile_hero { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+.tile_banner img { max-width: 100%; max-height: 200px; object-fit: contain; }
 
 .tiertwo_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px; /* Adjust the gap between items as needed */
-    justify-content: space-around;
+  display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-around; align-items: stretch; /* equal height per row */
 }
 
 .tiertwo_item {
-    flex: 1 1 calc(25% - 16px); /* 25% width minus the gap */
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
-    max-width: calc(25% - 16px); /* Ensures no item exceeds 25% width */
-    min-width: 250px; /* Optional: set a minimum width for items */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: auto; /* Set a fixed height */
+  flex: 1 1 calc(25% - 16px); max-width: calc(25% - 16px); min-width: 250px; box-sizing: border-box;
+  display: flex; flex-direction: column; justify-content: flex-start; height: auto; /* allow content-driven height */
 }
 
 @media (max-width: 1000px) {
-    .tiertwo_item {
-        flex: 1 1 calc(50% - 16px); /* 2 items per row on smaller screens */
-        max-width: calc(50% - 16px);
-    }
+  .tiertwo_item { flex: 1 1 calc(50% - 16px); max-width: calc(50% - 16px); }
 }
-
 @media (max-width: 600px) {
-    .tiertwo_item {
-        flex: 1 1 calc(100% - 16px); /* 1 item per row on narrow screens */
-        max-width: calc(100% - 16px);
-    }
+  .tiertwo_item { flex: 1 1 calc(100% - 16px); max-width: calc(100% - 16px); }
 }
 
-.tiertwo_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch; /* make all items in a row equal height */
-    gap: 16px; /* Adjust the gap between items as needed */
-}
-
-.tiertwo_item {
-    flex: 1 1 calc(25% - 16px); /* 25% width minus the gap */
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
-    max-width: calc(25% - 16px); /* Ensures no item exceeds 25% width */
-    min-width: 250px; /* Optional: set a minimum width for items */
-}
-
-@media (max-width: 1000px) {
-    .tiertwo_item {
-        flex: 1 1 calc(50% - 16px); /* 2 items per row on smaller screens */
-        max-width: calc(50% - 16px);
-    }
-}
-
-@media (max-width: 600px) {
-    .tiertwo_item {
-        flex: 1 1 calc(100% - 16px); /* 1 item per row on narrow screens */
-        max-width: calc(100% - 16px);
-    }
-}
-
-
-
-
-.tile-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.tile {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.tile:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-}
-
-.complete {
-    background-color: #c8e6c9;
-}
-
+/* -----------------------
+   GENERIC TILES (used elsewhere)
+------------------------ */
+.tile-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.tile { background-color: white; border-radius: 8px; padding: 20px; margin: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 250px; text-align: center; transition: transform 0.2s; }
+.tile:hover { box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); }
+.complete { background-color: #c8e6c9; }
 .challenge_complete {
-    /* background-color: yellow; */
-    padding: 25px;
-    border-radius: 5px;
-    margin: -10px;
-    font-size: 2em;
-    font-weight: bold;
-    background-image: url('https://engage.lclark.edu/www/images/portal_elements/greencheck.png');
-    background-repeat: no-repeat;
-    background-size: contain; 
-    background-size: contain;
-    text-align: right;
-    text-shadow: 1px 2px 5px white;
+  padding: 25px; border-radius: 5px; margin: -10px; font-size: 2em; font-weight: bold;
+  background-image: url('https://engage.lclark.edu/www/images/portal_elements/greencheck.png');
+  background-repeat: no-repeat; background-size: contain; text-align: right; text-shadow: 1px 2px 5px white;
 }
