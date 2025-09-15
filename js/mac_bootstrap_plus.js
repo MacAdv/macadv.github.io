@@ -278,8 +278,10 @@ $(() => {
  * Automatically injects content via AJAX if trigger element has `data-url`.
  */
 $('#siteModal').on('show.bs.modal', function (event) {
-    const trigger = $(event.relatedTarget); // the element that triggered the modal
+    const trigger = $(event.relatedTarget);
     const url = trigger.data('url');
+    const formguid = trigger.data('formguid');
+    const uid = trigger.data('uid');
     const title = trigger.data('title') || "Details";
     const target = trigger.data('target') || "#form_div";
 
@@ -288,14 +290,23 @@ $('#siteModal').on('show.bs.modal', function (event) {
 
     // Load content
     $(target).html("Loading...");
+    
     if (url) {
+        // Handle URL-based loading
         loadSlatePortalContent(url, target);
-        // $.get(url, function (data) {
-        //     $(target).html(data);
-        // }).fail(function () {
-        //     $(target).html("<p>Error loading content. Please try again.</p>");
-        // });
+    } else if (formguid) {
+        // Handle formguid-based loading (your existing pattern)
+        $.ajax({
+            url: '/register/',
+            dataType: "script",
+            data: {
+                id: formguid,
+                output: 'embed',
+                div: 'form_div',
+                person: uid,
+            }
+        });
     } else {
-        $(target).html("<p>No content URL provided.</p>");
+        $(target).html("<p>No content URL or form GUID provided.</p>");
     }
 });
