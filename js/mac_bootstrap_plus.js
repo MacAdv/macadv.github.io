@@ -75,13 +75,13 @@ const loadTab = (tab, queryString, isBack) => {
     const qs = queryString ? decodeQueryString(queryString) : {};
     delete qs["tab"];
 
-    
+
     const newQueryString = Object.keys(qs).length > 0 ? "&" + encodeQueryString(qs) : "";
-    
+
     if (!isBack) {
         history.pushState({ tab, queryString: newQueryString }, null, `?tab=${tab}${newQueryString}`);
     }
-    
+
     // Get the TabID element from the data-id
     const tabUID = qs["uid"];
     // Update the navigation state
@@ -117,7 +117,7 @@ function loadSlatePortalContent(pageUrl, targetDivId, callback) {
             restoreActiveTab();
             setupTabListeners(); // Re-bind event listeners for the dynamically injected tabs
 
-             // Run the callback AFTER content is loaded
+            // Run the callback AFTER content is loaded
             if (typeof callback === 'function') callback();
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -285,28 +285,73 @@ $('#siteModal').on('show.bs.modal', function (event) {
     const title = trigger.data('title') || "Details";
     const target = trigger.data('target') || "#form_div";
 
-    // Set modal title
     $('#siteModalLabel').text(title);
-
-    // Load content
     $(target).html("Loading...");
-    
+
     if (url) {
-        // Handle URL-based loading
         loadSlatePortalContent(url, target);
-    } else if (formguid) {
-        // Handle formguid-based loading (your existing pattern)
+        return;
+    }
+
+    if (formguid) {
+        // 1) Start with the required params
+        const payload = {
+            id: formguid,
+            output: 'embed',
+            div: 'form_div',
+            person: uid
+        };
+
+        // 2) Merge JSON blob if present
+        const rawParams = trigger.attr('data-form-params');
+        if (rawParams) {
+            try {
+                const extra = JSON.parse(rawParams);
+                Object.assign(payload, extra);
+            } catch (e) {
+                console.warn('Invalid JSON in data-form-params:', e);
+            }
+        }
+
+        // 3) Also merge any data-param-* attributes (Option B, below)
+        Object.assign(payload, collectParamAttributes(trigger[0]));
+
         $.ajax({
             url: '/register/',
             dataType: "script",
-            data: {
-                id: formguid,
-                output: 'embed',
-                div: 'form_div',
-                person: uid,
-            }
+            data: payload
         });
-    } else {
-        $(target).html("<p>No content URL or form GUID provided.</p>");
+
+        return;
     }
+
+    $(target).html("<p>No content URL or form GUID provided.</p>");
 });
+
+/**
+ * Collect data-param-* attributes and turn them into key/value pairs.
+ * Example: data-param-sys-entity-value="123"  -> { "sys:entity:value": "123" }
+ * Use double hyphen (“--”) to encode a literal hyphen in a segment if needed.
+ */
+function collectParamAttributes(el) {
+    const params = {};
+    if (!el || !el.attributes) return params;
+
+    for (let i = 0; i < el.attributes.length; i++) {
+        const a = el.attributes[i];
+        if (!a.name.startsWith('data-param-')) continue;
+
+        // Strip prefix
+        let key = a.name.slice('data-param-'.length);
+
+        // Decode: segments are separated by single hyphens; join with colons for Slate keys
+        // Allow “--” to mean a literal hyphen inside a segment.
+        key = key
+            .split(/-(?!-)/)              // split on single hyphens
+            .map(s => s.replace(/--/g, '-'))
+            .join(':');
+
+        params[key] = a.value;
+    }
+    return params;
+}
