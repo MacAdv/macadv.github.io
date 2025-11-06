@@ -309,7 +309,8 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 .parent_goal .goal_stat#donor_count_number,
 .parent_goal .goal_stat_label { font-size: 1.6em; }
 
-#main_give { order: 8; flex-basis: 100%; }
+/* TK 11.6.25 adding more emphasis to give button */
+#main_give { order: 8; flex-basis: 100%; font-weight: bold}
 
 .css_define_section { display: none; }
 
