@@ -28,30 +28,22 @@
     --border_sheer_gray: 1px solid var(--mac_sheer_gray);
     --border_radius: 5px;
   }
-  /* * {
+  * {
     line-height: 24px;
     font-family: var(--bodycopy_style) !important;
-
+    /* color: var(--mac_black); */
   }
-  */
-
-  /* Inside new_form_formatting.css (future-proof) */
-[data-fw-form="1"] * { line-height: 24px; font-family: var(--bodycopy_style) !important; }
-[data-fw-form="1"] input, 
-[data-fw-form="1"] textarea, 
-[data-fw-form="1"] select { border-radius: var(--border_radius); }
-
-[data-fw-form="1"]  #content {
+  #content {
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     max-width: 85%;
     border-radius: var(--border_radius);
     margin: auto;
   }
-[data-fw-form="1"]  #global {
+  #global {
     margin: 18px 0 24px 0;
   }
-[data-fw-form="1"]  h1 {
+  h1 {
       color: var(--mac_blue);
     margin: 2% 2% 2% 0;
     line-height: 64px;
@@ -59,10 +51,10 @@
     font-weight: normal;
     text-align: center;
   }
-[data-fw-form="1"]  textarea{
+  textarea{
     border-radius: var(--border_radius);
   }
-[data-fw-form="1"]  input{
+  input{
     border-radius: var(--border_radius);
   }
   #register_map {
@@ -135,11 +127,11 @@
   }
   
   /** adjust color of header rows and text **/
-[data-fw-form="1"]  tr.column>th {
+  tr.column>th {
     background: var(--mac_blue);
     color: var(--mac_white) !important;
   }
-[data-fw-form="1"]  tr.header {
+  tr.header {
     display: none;
   }
   a.replicate_delete {
