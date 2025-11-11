@@ -380,7 +380,7 @@ function logPortalActivity(portalName, pageName, recordId, additionalData) {
     // Make AJAX call to your logging query
     $.ajax({
         url: 'https://student.macalester.edu/portal/api_person?cmd=portal_activity',
-        type: 'POST',
+        type: 'GET',
         data: activityData,
         dataType: 'json',
         success: function(response) {
