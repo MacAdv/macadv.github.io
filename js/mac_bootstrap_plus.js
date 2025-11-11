@@ -355,3 +355,46 @@ function collectParamAttributes(el) {
     }
     return params;
 }
+
+
+/**
+ * Log portal page activity
+ * @param {string} portalName - Name of the portal (e.g., 'Student Portal')
+ * @param {string} pageName - Name of the page being viewed
+ * @param {string} recordId - Optional record ID if viewing a specific record
+ * @param {object} additionalData - Optional object with additional tracking data
+ * 
+ * Example usage in a portal page:
+ * logPortalActivity('Student Portal', 'Academic Records', null, {timestamp: new Date().toISOString()});
+ */
+
+function logPortalActivity(portalName, pageName, recordId, additionalData) {
+    // Build the data object
+    var activityData = {
+        portal: portalName || '',
+        page: pageName || '',
+        record: recordId || '',
+        data: additionalData ? JSON.stringify(additionalData) : ''
+    };
+    
+    // Make AJAX call to your logging query
+    $.ajax({
+        url: 'https://student.macalester.edu/portal/api_person?cmd=portal_activity',
+        type: 'POST',
+        data: activityData,
+        dataType: 'json',
+        success: function(response) {
+            // Silent success - no user notification needed
+            if (window.console) {
+                console.log('Portal activity logged successfully');
+            }
+        },
+        error: function(xhr, status, error) {
+            // Silent failure - don't interrupt user experience
+            if (window.console) {
+                console.error('Failed to log portal activity:', error);
+            }
+        }
+    });
+}
+
