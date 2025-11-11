@@ -382,7 +382,7 @@ function logPortalActivity(portalName, pageName, recordId, additionalData) {
         url: 'https://student.macalester.edu/portal/api_person?cmd=portal_activity',
         type: 'GET',
         data: activityData,
-        dataType: 'json',
+        dataType: 'text',
         success: function(response) {
             // Silent success - no user notification needed
             if (window.console) {
