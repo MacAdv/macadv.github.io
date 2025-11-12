@@ -358,6 +358,75 @@ function collectParamAttributes(el) {
 
 
 /**
+ * getPortalContextFromUrl
+ *
+ * Parse the current window location and extract a lightweight "portal" context.
+ * Uses the URL API and the pathname segments to derive a portal name, page name,
+ * and an optional record identifier.
+ *
+ * Behavior summary:
+ * - Reads the URL from window.location.href.
+ * - Splits the pathname into segments, filtering out empty segments.
+ * - portalName:
+ *     1. Uses the "portal" query parameter if present.
+ *     2. Otherwise uses the second path segment (pathParts[1]) when available.
+ *     3. Falls back to the string "Unknown".
+ * - pageName:
+ *     1. Uses the "tab" query parameter if present.
+ *     2. Otherwise uses the "cmd" query parameter.
+ *     3. Otherwise uses the last path segment.
+ *     4. Falls back to the string "_unknown".
+ * - recordId:
+ *     1. Uses the "guid" query parameter if present.
+ *     2. Otherwise uses "id" or "record" query parameters.
+ *     3. Falls back to null when none are present.
+ *
+ * @returns {{portalName: string, pageName: string, recordId: (string|null)}}
+ *   An object containing:
+ *   - portalName: the resolved portal name (string).
+ *   - pageName: the resolved page name or command (string).
+ *   - recordId: a record identifier if present, otherwise null.
+ *
+ * @example
+ * // URL: /portal/advising?tab=location_detail&guid=abc123
+ * // returns: { portalName: "advising", pageName: "location_detail", recordId: "abc123" }
+ */
+function getPortalContextFromUrl() {
+  // Use the built-in URL API for nice parsing
+  const url = new URL(window.location.href);
+
+  // Example: /portal/advising?tab=location_detail&guid=...
+  const pathParts = url.pathname.split('/').filter(Boolean);
+  // ["portal", "advising"]
+
+  const portalName =
+    url.searchParams.get('portal') ||  // if you ever use ?portal=
+    (pathParts[1] || 'Unknown');       // "advising" from /portal/advising
+
+  // Page name: prefer tab/cmd, fallback to last path segment
+  const pageName =
+    url.searchParams.get('tab') ||
+    url.searchParams.get('cmd') ||
+    (pathParts[pathParts.length - 1] || '_unknown');
+
+  // Common record ID patterns
+  const recordId =
+    url.searchParams.get('guid') ||
+    url.searchParams.get('id') ||
+    url.searchParams.get('record') ||
+    null;
+
+  return { portalName, pageName, recordId };
+}
+
+// Then call your logger on DOM ready:
+$(function () {
+  const ctx = getPortalContextFromUrl();
+  logPortalActivity(ctx.portalName, ctx.pageName, ctx.recordId, null);
+});
+
+
+/**
  * Log portal page activity
  * @param {string} portalName - Name of the portal (e.g., 'Student Portal')
  * @param {string} pageName - Name of the page being viewed
