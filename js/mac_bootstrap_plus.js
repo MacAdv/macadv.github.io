@@ -419,13 +419,6 @@ function getPortalContextFromUrl() {
   return { portalName, pageName, recordId };
 }
 
-// Then call your logger on DOM ready:
-$(function () {
-  const ctx = getPortalContextFromUrl();
-  logPortalActivity(ctx.portalName, ctx.pageName, ctx.recordId, null);
-});
-
-
 /**
  * Log portal page activity
  * @param {string} portalName - Name of the portal (e.g., 'Student Portal')
