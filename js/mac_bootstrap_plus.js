@@ -326,7 +326,10 @@ $('#siteModal').on('show.bs.modal', function (event) {
     }
 
     $(target).html("<p>No content URL or form GUID provided.</p>");
+}).draggable({
+    handle: ".modal-header" // This makes the modal header the drag handle
 });
+
 
 /**
  * Collect data-param-* attributes and turn them into key/value pairs.
