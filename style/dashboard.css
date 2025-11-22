@@ -104,7 +104,8 @@ td.field-value:hover {
 .info-tile-value {
   color: var(--brand-orange);
   font-weight: bold;
-  font-size: 2.2em;
+  font-size: 1.6em;
+  text-align: center;
 }
 
 /* --- Component: Action Buttons --- */
