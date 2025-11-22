@@ -20,8 +20,8 @@ h2 {
 /* Global link styling per brand guidelines */
 a {
   color: var(--brand-blue);
-  font-weight: bold;
-  text-decoration: none;
+  /* font-weight: bold;
+  text-decoration: none; */
 }
 
 /* Hide specific internal Slate parts if standardizing */
