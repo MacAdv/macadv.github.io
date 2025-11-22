@@ -1,0 +1,211 @@
+/* dashboard.css */
+
+:root {
+  /* Slate/Brand Palette extracted from samples */
+  --brand-blue: #01426A;
+  --brand-orange: #D44420;
+  --brand-yellow: #FFB500;
+  --brand-gray-border: #A5ADAF;
+  --brand-gray-bg: #F8F9FA;
+  --brand-light-orange: #FFF3EE;
+  --text-muted: #5B6770;
+}
+
+/* --- Global Typography & Overrides --- */
+h2 {
+  color: var(--brand-blue) !important;
+  font-weight: bold !important;
+}
+
+/* Global link styling per brand guidelines */
+a {
+  color: var(--brand-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hide specific internal Slate parts if standardizing */
+#part_timeline_linkxx, 
+#part_material_linkxx {
+  display: none;
+}
+
+/* --- Component: Slate Branded Table --- */
+table.slate-branded-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+table.slate-branded-table th, 
+table.slate-branded-table td {
+  border: 1px solid var(--brand-gray-border);
+  padding: 12px 8px;
+  text-align: left;
+}
+
+table.slate-branded-table th {
+  background-color: var(--brand-blue);
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+table.slate-branded-table tr:nth-child(even) {
+  background-color: var(--brand-gray-bg);
+}
+
+table.slate-branded-table tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+/* Interactive Field Values */
+td.field-value {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+td.field-value:hover {
+  background-color: var(--brand-light-orange);
+}
+
+/* --- Component: Info Tiles (KPI Cards) --- */
+.info-tiles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.info-tile {
+  background: #F7F7F7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  max-width: 340px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.info-tile-label {
+  color: var(--text-muted);
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.info-tile-value {
+  color: var(--brand-orange);
+  font-weight: bold;
+  font-size: 2.2em;
+}
+
+/* --- Component: Action Buttons --- */
+.action-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+a.action-button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 4px;
+  background-color: var(--brand-orange);
+  color: #FFFFFF !important; /* Force white over global link color */
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95em;
+  border: 1px solid var(--brand-orange);
+  transition: all 0.2s ease-in-out;
+}
+
+a.action-button:hover {
+  background-color: var(--brand-yellow);
+  border-color: var(--brand-yellow);
+  color: var(--brand-blue) !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media only screen and (max-width: 600px) {
+  /* Stack Info Tiles */
+  .info-tiles-wrapper {
+    flex-direction: column;
+  }
+  .info-tile {
+    padding: 14px;
+    max-width: 100%;
+  }
+  .info-tile-value {
+    font-size: 1.5em;
+  }
+
+  /* Stack Action Buttons */
+  .action-buttons-container {
+    flex-direction: column;
+  }
+  a.action-button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Stack Table Rows (Responsive EAV View) */
+  table.slate-branded-table, 
+  table.slate-branded-table thead, 
+  table.slate-branded-table tbody, 
+  table.slate-branded-table th, 
+  table.slate-branded-table td, 
+  table.slate-branded-table tr {
+    display: block;
+  }
+  
+  table.slate-branded-table thead tr {
+    display: none;
+  }
+  
+  table.slate-branded-table tr {
+    margin-bottom: 15px;
+    border: 1px solid var(--brand-gray-border); /* Add border to row container */
+  }
+  
+  table.slate-branded-table td {
+    border: none;
+    border-bottom: 1px solid var(--brand-gray-border);
+    position: relative;
+    padding-left: 50%;
+    font-size: 1em;
+  }
+  
+  table.slate-branded-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* Label injection for mobile view */
+  table.slate-branded-table td:before {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: var(--brand-blue);
+  }
+  
+  /* Specific labels based on class */
+  table.slate-branded-table td.field-id:before {
+    content: "Field ID";
+  }
+  table.slate-branded-table td.field-value:before {
+    content: "Field Value";
+  }
+}
