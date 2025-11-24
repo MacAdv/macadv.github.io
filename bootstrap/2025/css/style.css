@@ -22623,11 +22623,11 @@ html[dir=rtl] .choices__input {
 }
 
 .form_signature[data-style="Dancing_Script"] {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive !important;
 }
 
 .form_signature[data-style="Pacifico"] {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive !important;
 }
 
 .form_signature[data-style="Satisfy"] {
@@ -22635,15 +22635,15 @@ html[dir=rtl] .choices__input {
 }
 
 .form_signature[data-style="Kaushan_Script"] {
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Kaushan Script', cursive !important;
 }
 
 .form_signature[data-style="Shadows_Into_Light"] {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Shadows Into Light', cursive !important;
 }
 
 .form_signature[data-style="Caveat"] {
-  font-family: 'Caveat', cursive;
+  font-family: 'Caveat', cursive !important;
 }
 
 .form_signature_editable,
