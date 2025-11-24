@@ -22606,3 +22606,143 @@ html[dir=rtl] .choices__input {
   padding: 0px 10px;
   min-width: 350px;
 }
+
+/***************************************************
+****************************************************
+****************************************************
+****** Style for Slate Form Signature Widget *******
+****************************************************
+****************************************************
+****************************************************
+*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Kaushan+Script&family=Pacifico&family=Satisfy&family=Shadows+Into+Light&display=block');
+
+.form_signature[data-style] {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.form_signature[data-style="Dancing_Script"] {
+  font-family: 'Dancing Script', cursive;
+}
+
+.form_signature[data-style="Pacifico"] {
+  font-family: 'Pacifico', cursive;
+}
+
+.form_signature[data-style="Satisfy"] {
+  font-family: 'Satisfy', cursive !important;
+}
+
+.form_signature[data-style="Kaushan_Script"] {
+  font-family: 'Kaushan Script', cursive;
+}
+
+.form_signature[data-style="Shadows_Into_Light"] {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.form_signature[data-style="Caveat"] {
+  font-family: 'Caveat', cursive;
+}
+
+.form_signature_editable,
+.form_signature_readonly {
+  width: 400px;
+}
+
+.form_signature_preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form_signature_preview>div {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.form_signature_preview>div,
+.form_signature_editable,
+.form_signature_readonly {
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.form_signature_editable,
+.form_signature_readonly {
+  padding: 10px;
+  line-height: 12px;
+}
+
+.form_signature_preview>div,
+.form_signature_editable {
+  cursor: pointer;
+}
+
+.form_signature_preview>div:hover,
+.form_signature_editable:hover {
+  background: #dadada;
+}
+
+.form_signature_preview>div.selected {
+  border-color: #daa520;
+  background: #fafad2;
+}
+
+.form_signature_editable .form_signature,
+.form_signature_editable .form_signature_details {
+  display: none;
+}
+
+.form_signature_details {
+  color: #808080;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.form_signature_instructions {
+  color: #808080;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.form_signature_editable[data-signed="1"] .form_signature_instructions {
+  display: none;
+}
+
+.form_signature_editable[data-signed="1"] .form_signature,
+.form_signature_editable[data-signed="1"] .form_signature_details {
+  display: block;
+}
+
+.form_signature_readonly[data-signed="1"] {
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiM0M0EwNDciIGQ9Ik0zOS45ODksMTJjMCwwLDAuOTk5LDIzLTE1LjgxNiwzMkM3LjAxMiwzNSw4LjAxMSwxMiw4LjAxMSwxMkMxNi4wMDYsMTIsMjQsNCwyNCw0UzMwLjk5NSwxMiwzOS45ODksMTJ6Ii8+PHBhdGggZmlsbD0iI0RDRURDOCIgZD0iTTI5LjgyNiAxOEwyMS45MzUgMjUuOTAyIDE4LjE3IDIyLjE0NiAxNiAyNC4zMjIgMjEuOTM4IDMwLjI0NiAzMiAyMC4xNzF6Ii8+PC9zdmc+) no-repeat calc(100% - 5px) 5px;
+  background-size: 24px;
+}
+
+.form_signature_readonly[data-signed="error"] {
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiNmNDQzMzYiIGQ9Ik00NCwyNGMwLDExLjA0NS04Ljk1NSwyMC0yMCwyMFM0LDM1LjA0NSw0LDI0UzEyLjk1NSw0LDI0LDRTNDQsMTIuOTU1LDQ0LDI0eiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yOS42NTYsMTUuNTE2bDIuODI4LDIuODI4bC0xNC4xNCwxNC4xNGwtMi44MjgtMi44MjhMMjkuNjU2LDE1LjUxNnoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzIuNDg0LDI5LjY1NmwtMi44MjgsMi44MjhsLTE0LjE0LTE0LjE0bDIuODI4LTIuODI4TDMyLjQ4NCwyOS42NTZ6Ii8+PC9zdmc+) no-repeat calc(100% - 5px) 5px;
+  background-size: 24px;
+  white-space: pre-wrap;
+  color: #f00;
+}
+
+/***************************************************
+****************************************************
+****************************************************
+*** END OF Style for Slate Form Signature Widget ***
+****************************************************
+****************************************************
+****************************************************
+*/
