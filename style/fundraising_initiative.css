@@ -50,6 +50,18 @@ html h1, html h2 {
   display: block;
 }
 
+html h3 {
+  margin-top: 15px;
+  margin-bottom: 4px;
+  color: var(--mac_gray) !important;
+  font-family: var(--bodycopy_style);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: normal;
+  text-align: center !important;
+  display: block;
+}
+
 /* -----------------------
    MENU TABS
 ------------------------ */
