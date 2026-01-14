@@ -348,6 +348,22 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
   display: flex; flex-direction: column; justify-content: flex-start; height: auto; /* allow content-driven height */
 }
 
+/* Make tier-two tiles behave like real links */
+.tiertwo_item > a,
+a.tile-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Preserve hover behavior when wrapped in <a> */
+.tiertwo_item > a:hover .tile,
+a.tile-link:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 @media (max-width: 1000px) {
   .tiertwo_item { flex: 1 1 calc(50% - 16px); max-width: calc(50% - 16px); }
 }
