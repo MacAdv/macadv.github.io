@@ -339,7 +339,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 .parent_goal .goal_stat_label { font-size: 1.6em; }
 
 /* TK 11.6.25 adding more emphasis to give button */
-#main_give { order: 8; flex-basis: 100%; font-weight: bold}
+#main_give { order: 8; flex-basis: 100%; font-weight: bold; margin-top: 2em;}
 
 .css_define_section { display: none; }
 
