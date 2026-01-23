@@ -38,7 +38,7 @@
 }
 
 /* SCOPED: Prevents overriding main site #content divs */
-.form_container #content {
+#content .form_container {
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     max-width: 85%;
