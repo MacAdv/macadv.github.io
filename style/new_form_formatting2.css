@@ -47,7 +47,7 @@
 }
 
 /* SCOPED */
-.form_container #global {
+#global .form_container  {
     margin: 18px 0 24px 0;
 }
 
