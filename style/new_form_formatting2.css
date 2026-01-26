@@ -52,6 +52,7 @@
     #content .form_container {
         max-width: 100%;
         padding: 0px;
+        box-shadow: none;
     }
 }
 
