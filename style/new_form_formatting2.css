@@ -47,6 +47,14 @@
     padding: 1.6em
 }
 
+/* Mobile responsive - adjust max-width for smaller screens */
+@media (max-width: 768px) {
+    #content .form_container {
+        max-width: 100%;
+        padding: 0px;
+    }
+}
+
 /* SCOPED */
 #global .form_container  {
     margin: 18px 0 24px 0;
