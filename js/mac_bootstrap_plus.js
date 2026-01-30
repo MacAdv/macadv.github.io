@@ -463,3 +463,60 @@ function logPortalActivity(portalName, pageName, recordId, additionalData) {
     });
 }
 
+
+// Store where the user was when they clicked Feedback
+/**
+ * Checks if the user is currently viewing the feedback tab/page.
+ * 
+ * This function examines the URL's query parameters to determine if the "tab"
+ * parameter is set to "feedback". This is useful for conditionally showing,
+ * hiding, or processing feedback-related UI elements.
+ * 
+ * @returns {boolean} Returns true if the current page URL contains the parameter
+ *                    "?tab=feedback", false otherwise.
+ * 
+ * @example
+ * // Example 1: User is on the feedback page
+ * // URL: https://example.com/page?tab=feedback
+ * if (alreadyOnFeedbackPage()) {
+ *   console.log("User is viewing feedback"); // This will execute
+ * }
+ * 
+ * @example
+ * // Example 2: User is NOT on the feedback page
+ * // URL: https://example.com/page?tab=settings
+ * if (alreadyOnFeedbackPage()) {
+ *   console.log("User is viewing feedback"); // This will NOT execute
+ * }
+ * 
+ * @note Uses the URL and URLSearchParams APIs to parse query parameters.
+ *       This is a more reliable method than manually parsing window.location.href.
+ */
+(function () {
+    const STORAGE_KEY = "portal_feedback_from_url";
+
+    function alreadyOnFeedbackPage() {
+    return new URL(window.location.href).searchParams.get("tab") === "feedback";
+    }
+
+    // $(document).on("click", 'a[data-tab="feedback"], #btnReportDataIssue', function () {
+    $(document).on("click", function () {
+        if (alreadyOnFeedbackPage()) return;
+
+        const fromUrl = window.location.href;
+
+        // 1) Always store it (most reliable)
+        try { sessionStorage.setItem(STORAGE_KEY, fromUrl); } catch (e) {}
+
+        // 2) Also append as a query param, so it’s visible and survives refresh
+        try {
+            const $a = $(this);
+            const rawHref = $a.attr("href") || "?tab=feedback";
+            const u = new URL(rawHref, window.location.href); // resolves relative URLs safely
+            u.searchParams.set("from", fromUrl);
+            $a.attr("href", u.pathname + u.search);
+        } catch (e) {}
+    });
+})();
+
+
