@@ -495,14 +495,8 @@ function logPortalActivity(portalName, pageName, recordId, additionalData) {
 (function () {
     const STORAGE_KEY = "portal_feedback_from_url";
 
-    function alreadyOnFeedbackPage() {
-    return new URL(window.location.href).searchParams.get("tab") === "feedback";
-    }
-
     // $(document).on("click", 'a[data-tab="feedback"], #btnReportDataIssue', function () {
     $(document).on("click", function () {
-        if (alreadyOnFeedbackPage()) return;
-
         const fromUrl = window.location.href;
 
         // 1) Always store it (most reliable)
