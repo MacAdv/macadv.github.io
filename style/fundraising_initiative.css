@@ -19,9 +19,10 @@
   --heading_style_medium: NewslabMedium;
   --bodycopy_style: DIN Next W01 Regular, Helvetica Neue, Helvetica, Arial, sans-serif;
   --bodycopy_weight: normal;
-  --title_size: 3rem;
-  --h1_size: 1.4rem;
-  --h2_size: 1.2rem;
+  --title_size: 1.8rem;
+  --h1_size: 1.8rem;
+  --h2_size: 1.6rem;
+  --h3_size: 1.4rem;
   --p_size: 1rem;
   --sub_size: 0.9rem;
   /** Border **/
@@ -45,18 +46,20 @@
   margin-top: 25px;
   margin-bottom: 4px;
   color: var(--mac_blue) !important;
-  font-family: acumin-pro, sans-serif;
-  font-size: clamp(1.6rem, 4vw, 3rem) !important;
+  font-family: var(--heading_style_medium);
   line-height: 1.25;
   font-weight: 300;
   text-align: center !important;
 }
 
+h1{  font-size: var(--h1_size);}
+h2{  font-size: var(--h2_size);}
+
 
  h3 {
   margin-top: 15px;
   font-family: var(--bodycopy_style);
-  font-size: 1.5rem;
+  font-size: var(--h3_size);
   line-height: 1.25;
   font-weight: normal;
   display: block;
