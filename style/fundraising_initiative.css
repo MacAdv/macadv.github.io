@@ -309,7 +309,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 ------------------------ */
 .goal_stat { display: flex; flex-direction: column; align-items: flex-start; flex-grow: 1; }
 /* TK edit slightly smaller font size 11.6.25 */
-.goal_stat_label { width: 100%; font-size: 2rem; }
+.goal_stat_label { width: 100%; font-size: 1.4rem; }
 .goal_stat_label_tile { width: 100%; font-size: 1.4rem; }
 
 .goal_stat#donor_count { order: 1; flex-basis: 40%; }
