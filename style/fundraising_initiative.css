@@ -100,6 +100,92 @@ h2{  font-size: var(--h2_size);}
   #contentcontainter ul.menuTabs li a:hover { border-bottom: 1px solid #fff; }
 }
 
+/*  -----------------------
+   Navbar section 
+------------------------ */
+/* Container becomes a 2-row stack */
+        .sectionnav {
+          background-color: var(--mac_light_gray);
+          padding: 8px 10px 10px 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        /* Row 1: link bar */
+        .sectionnav-row--links {
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+          flex-wrap: wrap;
+          font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        }
+
+        .sectionnav-row--links a {
+          color: var(--mac_blue);
+          text-decoration: none;
+          padding: 8px 10px;
+          border-radius: 6px;
+          line-height: 1.1;
+          white-space: nowrap;
+        }
+
+        .sectionnav-row--links a:hover {
+          background-color: rgba(0,0,0,0.08);
+        }
+
+        /* Mobile: keep row 1 as horizontal scroll (single line) */
+        @media (max-width: 615px) {
+          .sectionnav-row--links {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          /* Optional: slightly tighter link padding on phones */
+          .sectionnav-row--links a {
+            padding: 8px 9px;
+          }
+        }
+
+        /* Row 2: CTA full-width */
+        .sectionnav-row--cta {
+          display: flex;
+          justify-content: center;
+        }
+
+        .give-cta {
+          display: block;
+          width: min(680px, 100%);
+          text-align: center;
+          background: var(--mac_blue) !important;
+          color: #fff !important;
+          text-decoration: none;
+          padding: 12px 14px;
+          border-radius: 8px;
+          font-size: clamp(1rem, 2.8vw, 1.15rem);
+          font-weight: 600;
+          letter-spacing: 0.2px;
+        }
+
+        .give-cta:hover {
+          filter: brightness(0.92);
+        }
+
+        /* Sticky behavior */
+        .sectionnav.sticky {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+        }
+
+        /* Ensure anchors land below the now-taller sticky nav */
+        html { scroll-padding-top: 135px; } /* adjust if you change padding/font sizes */
+
+
 /* -----------------------
    OVERVIEW
 ------------------------ */
