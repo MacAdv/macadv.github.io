@@ -317,13 +317,13 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 ------------------------ */
 .goal_stat { display: flex; flex-direction: column; align-items: flex-start; flex-grow: 1; }
 /* TK edit slightly smaller font size 11.6.25 */
-.goal_stat_label { width: 100%; font-size: 1.4rem; }
-.goal_stat_label_tile { width: 100%; font-size: 1.4rem; }
+.goal_stat_label { width: 100%; font-size: 1.0rem; }
+.goal_stat_label_tile { width: 100%; font-size: 1.0rem; }
 
 .goal_stat#donor_count { order: 1; flex-basis: 40%; }
 /* TK edited font sizes on progress bar to be slightly smaller 11.6.25 */
-.goal_stat#donor_count_number, .goal_stat#dollar_count_number { font-size: 1.5rem; font-weight: bold; color: var(--mac_blue); }
-.goal_stat#donor_count_label, .goal_stat#dollar_count_label { font-size: 1.5rem; font-weight: bold; color: var(--mac_blue) !important; margin-bottom: unset; }
+.goal_stat#donor_count_number, .goal_stat#dollar_count_number { font-size: 1.1em; font-weight: bold; color: var(--mac_blue); }
+.goal_stat#donor_count_label, .goal_stat#dollar_count_label { font-size: 1.1rem; font-weight: bold; color: var(--mac_blue) !important; margin-bottom: unset; }
 
 .goal_stat#donor_count_progress_stat { order: 2; flex-basis: 60%; text-align: right; align-self: flex-end; }
 .goal_stat#donor_count_progress_bar,
