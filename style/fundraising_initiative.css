@@ -40,12 +40,12 @@
 
 .wrap_content h1,
 .wrap_content > h2,
-.part.headline h h1 {
+.part.headline h1 {
   margin-top: 25px;
   margin-bottom: 4px;
   color: var(--mac_blue) !important;
   font-family: acumin-pro, sans-serif;
-  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 4vw, 3rem) !important;
   line-height: 1.25;
   font-weight: 300;
   text-align: center;
