@@ -65,8 +65,16 @@ h2{  font-size: var(--h2_size);}
   display: block;
 }
 
+/* ------------------------------
+   GLOBAL FORMAT OPTIONS
+------------------------------- */
+
 .left-align { 
   text-align: left !important; 
+}
+
+p {
+  line-height: 1.45em;
 }
 
 /* -----------------------
