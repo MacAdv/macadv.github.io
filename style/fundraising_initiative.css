@@ -73,7 +73,7 @@ h2{  font-size: var(--h2_size);}
   text-align: left !important; 
 }
 
-p {
+p, ul {
   line-height: 1.45em;
 }
 
