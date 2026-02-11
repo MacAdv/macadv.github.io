@@ -279,7 +279,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 /* -----------------------
    LAYOUT WRAPPER
 ------------------------ */
-.wrap_content { width: 100%; max-width: 1325px; margin: 0 auto; padding: 0 20px; }
+.wrap_content { width: 100%; max-width: 1325px; margin: 0 auto; padding: 0 20px 25px 20px; }
 
 .main_hero { /* display: flex; */ align-items: center; flex-direction: row; }
 .tier2_goal { width: 80%; margin: auto; }
@@ -321,7 +321,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 
 .goal_stat#donor_count { order: 1; flex-basis: 40%; }
 .goal_stat#donor_count_number, .goal_stat#dollar_count_number { font-size: 1.6em; font-weight: bold; color: var(--mac_blue); }
-.goal_stat#donor_count_label, .goal_stat#dollar_count_label { font-size: 1.6em; font-weight: bold; color: var(--mac_blue) !important; margin-bottom: unset; }
+.goal_stat#donor_count_label, .goal_stat#dollar_count_label { font-size: 1.4em; font-weight: bold; color: var(--mac_blue) !important; margin-bottom: unset; }
 
 .goal_stat#donor_count_progress_stat { order: 2; flex-basis: 60%; text-align: right; align-self: flex-end; }
 .goal_stat#donor_count_progress_bar,
