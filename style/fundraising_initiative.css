@@ -65,6 +65,10 @@ h2{  font-size: var(--h2_size);}
   display: block;
 }
 
+.left-align { 
+  text-align: left !important; 
+}
+
 /* -----------------------
    MENU TABS
 ------------------------ */
@@ -320,7 +324,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
 .goal_stat_label_tile { width: 100%; font-size: 1.4rem; }
 
 .goal_stat#donor_count { order: 1; flex-basis: 40%; }
-.goal_stat#donor_count_number, .goal_stat#dollar_count_number { font-size: 1.6em; font-weight: bold; color: var(--mac_blue); }
+.goal_stat#donor_count_number, .goal_stat#dollar_count_number { font-size: 1.4em; font-weight: bold; color: var(--mac_blue); }
 .goal_stat#donor_count_label, .goal_stat#dollar_count_label { font-size: 1.4em; font-weight: bold; color: var(--mac_blue) !important; margin-bottom: unset; }
 
 .goal_stat#donor_count_progress_stat { order: 2; flex-basis: 60%; text-align: right; align-self: flex-end; }
