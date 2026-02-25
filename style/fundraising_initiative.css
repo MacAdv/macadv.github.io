@@ -386,8 +386,14 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
    - Consolidated & fixed to allow natural height growth.
 ------------------------ */
 .tiertwo_title {
-  font-size: 1.5em; font-weight: bold; text-align: center; padding: 5px; min-height: 3em;
-  display: flex; align-items: center; justify-content: center;
+  /*font-size: 1.5em; 
+  font-weight: bold; 
+  text-align: center; */
+  padding: 5px; 
+  /*min-height: 3em;*/
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 
 /* Ensure images are centered and consistent */
@@ -429,12 +435,33 @@ a.tile-link:hover {
 /* -----------------------
    GENERIC TILES (used elsewhere)
 ------------------------ */
-.tile-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.tile { background-color: white; border-radius: 8px; padding: 20px; margin: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 250px; text-align: center; transition: transform 0.2s; }
+.tile-container { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: center; 
+}
+.tile { 
+  background-color: white; 
+  border-radius: 8px; 
+  padding: 15px; 
+  margin: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 250px; 
+  text-align: center; 
+  transition: transform 0.2s; 
+}
 .tile:hover { box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); }
 .complete { background-color: #c8e6c9; }
 .challenge_complete {
-  padding: 25px; border-radius: 5px; margin: -10px; font-size: 2em; font-weight: bold;
+  padding: 25px; 
+  border-radius: 5px; 
+  margin: -10px; 
+  font-size: 2em; 
+  font-weight: bold;
   background-image: url('https://engage.lclark.edu/www/images/portal_elements/greencheck.png');
-  background-repeat: no-repeat; background-size: contain; text-align: right; text-shadow: 1px 2px 5px white;
+  background-repeat: no-repeat; 
+  background-size: contain; 
+  text-align: right; 
+  text-shadow: 1px 2px 5px white;
 }
