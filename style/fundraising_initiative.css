@@ -157,41 +157,9 @@ div#wrapper > div#aside { flex: 0 1 35%; padding: 5px; align-self: center; }
   BREADCRUMBS
 -------------------------- */
 
-.fi-breadcrumb {
-    padding: 10px 20px;
-    background: #f8f8f8;
-    border-bottom: 1px solid #e0e0e0;
-}
-.fi-breadcrumb ol.breadcrumb {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    font-size: 0.9rem;
-}
-.fi-breadcrumb ol.breadcrumb li {
-    display: flex;
-    align-items: center;
-}
-.fi-breadcrumb ol.breadcrumb li + li::before {
-    content: ">";
-    margin: 0 0.5rem;
-    color: #aaa;
-}
-.fi-breadcrumb ol.breadcrumb li a {
-    color: var(--mac_blue);
-    text-decoration: none;
-}
-.fi-breadcrumb ol.breadcrumb li a:hover {
-    text-decoration: underline;
-}
-.fi-breadcrumb ol.breadcrumb li.active {
-    color: var(--mac_gray);
-    font-weight: 500;
-}
+/* Stored in the Nav bar page due to goofiness of css needing to be stored in section editor */
+
+
 
 /* -----------------------
    GENERIC PROGRESS BARS
