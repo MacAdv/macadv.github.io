@@ -177,14 +177,50 @@ div#wrapper > div#aside { flex: 0 1 35%; padding: 5px; align-self: center; }
    BUTTONS
 ------------------------ */
 .give-button {
-  width: 50%; background-color: var(--mac_blue); color: white !important; padding: 14px 20px; margin: 8px 0; border: none; border-radius: 5px;
-  font-size: 25px; display: inline-block; text-align: center; text-decoration: none;
+  width: 50%; 
+  background-color: var(--mac_blue); 
+  color: white !important; 
+  padding: 14px 20px; 
+  margin: 8px 0; 
+  border: none; 
+  border-radius: 5px;
+  font-size: 25px; 
+  display: inline-block; 
+  text-align: center; 
+  text-decoration: none;
 }
 .give-button:hover { background-color: var(--mac_gray) !important; }
 
+.button-orange {
+  min-width: 250px; 
+  background-color: var(--mac_orange) !important; 
+  color: white !important; 
+  padding: 5px 10px; 
+  margin: 8px 0; 
+  border: none; 
+  border-radius: 5px;
+  font-size: 25px; 
+  display: inline-block; 
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-orange:hover {
+  filter: brightness(0.92) !important;
+}
+
 .button {
-  min-width: 250px; background-color: var(--mac_blue) !important; color: white !important; padding: 5px 10px; margin: 8px 0; border: none; border-radius: 5px;
-  font-size: 25px; display: inline-block; text-align: center; text-decoration: none;
+  min-width: 250px; 
+  background-color: var(--mac_blue) !important; 
+  color: white !important; 
+  padding: 5px 10px; 
+  margin: 8px 0; 
+  border: none; 
+  border-radius: 5px;
+  font-size: 25px; 
+  display: inline-block; 
+  text-align: center;
+  text-decoration: none;
 }
 /* Fixed var name: was --mac_grayy */
 .button:hover { background-color: var(--mac_gray) !important; }
