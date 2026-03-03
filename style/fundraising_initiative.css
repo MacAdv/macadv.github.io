@@ -359,7 +359,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
   box-shadow: 0 4px 7px 7px rgba(0, 0, 0, 0.1);
   margin: 30px 0 !important;
   background-color: white;  
-  padding-top: 30px;
+  padding-top: 25px;
 }
 
 .main_hero { /* display: flex; */ align-items: center; flex-direction: row; }
@@ -513,4 +513,72 @@ a.tile-link:hover {
   background-size: contain; 
   text-align: right; 
   text-shadow: 1px 2px 5px white;
+}
+
+
+/* -----------------------
+   QUOTE STYLING
+------------------------ */
+
+
+.pull-quote {
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  margin-left: 40px;
+  padding: 36px 48px 28px 40px;
+  background: transparent;
+}
+
+.pull-quote .opening-mark {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  font-family: Garamond, Georgia, serif;
+  font-size: 65px;
+  color: #01426A;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.pull-quote blockquote {
+  font-family: NewslabLight, georgia, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  line-height: 1.6;
+  color: var(--mac_gray);
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-inline-start: 10px !important;
+  margin-inline-end: 10px !important;
+}
+
+.pull-quote .closing-mark {
+  font-family: Garamond, Georgia, serif;
+  font-style: italic;
+  color: var(--mac_gray);
+  font-size: 22px;
+  padding-left: 5px;
+  line-height: 1;
+}
+
+.attribution {
+  font-family: DIN Next W01 Regular, serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--mac_gray);
+  text-transform: uppercase;
+  font-style: normal;
+  padding-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.attribution::before {
+  content: '—';
+  color: var(--mac_gray);
+  font-style: normal;
+  flex-shrink: 0;
 }
