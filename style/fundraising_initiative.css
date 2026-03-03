@@ -512,13 +512,39 @@ a.tile-link:hover {
   margin: -10px; 
   font-size: 2em; 
   font-weight: bold;
-  background-image: url('https://engage.lclark.edu/www/images/portal_elements/greencheck.png');
+  background-image: url('https://engage.macalester.edu/www/images/portal-elements/greencheck.png');
   background-repeat: no-repeat; 
   background-size: contain; 
   text-align: right; 
   text-shadow: 1px 2px 5px white;
 }
 
+.tile-advocate {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s;
+  position: relative;
+}
+.tile-advocate>* {
+  position: relative;
+  z-index: 1;
+}
+.tile-advocate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://engage.macalester.edu/www/images/mac/Mac%20shield.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
 
 /* -----------------------
    QUOTE STYLING
