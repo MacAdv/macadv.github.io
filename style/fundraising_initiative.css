@@ -359,7 +359,7 @@ div.announce_section { padding: 10px 0px; border-top: solid; }
   box-shadow: 0 4px 7px 7px rgba(0, 0, 0, 0.1);
   margin: 30px 0 !important;
   background-color: white;  
-  padding-top: 25px;
+  /*padding-top: 25px;*/
 }
 
 .main_hero { /* display: flex; */ align-items: center; flex-direction: row; }
