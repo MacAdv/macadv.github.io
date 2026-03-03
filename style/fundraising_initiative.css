@@ -530,7 +530,7 @@ a.tile-link:hover {
   width: 100%;
   position: relative;
   margin-left: 40px;
-  padding: 36px 48px 28px 40px;
+  padding:10px 48px 10px 40px;
   background: transparent;
 }
 
@@ -573,7 +573,7 @@ a.tile-link:hover {
   color: var(--mac_gray);
   text-transform: uppercase;
   font-style: normal;
-  padding-top: 10px;
+  padding-top: 5px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
