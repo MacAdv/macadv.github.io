@@ -89,6 +89,10 @@ p, ul {
   font-weight: normal !important;
 }
 
+.c_doc-background.cr {
+  background-color: #f9f9f9 !important;
+}
+
 /* -----------------------
    MENU TABS
 ------------------------ */
