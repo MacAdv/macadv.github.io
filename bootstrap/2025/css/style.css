@@ -18752,6 +18752,9 @@ textarea.form-control-lg {
 .nav-pills-bg-soft .nav-link {
   color: var(--bs-blue); /* updated from --bs-primary to Mac Blue */
 }
+[data-bs-theme=dark] .nav-pills-bg-soft .nav-link {
+  color: #A5ADAF; /* Mac Light Gray; override blue in dark mode */
+}
 
 .nav-pills.nav-tabs-line {
   padding: 0.625rem 0;
