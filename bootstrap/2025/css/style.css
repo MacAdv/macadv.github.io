@@ -81,8 +81,8 @@
   --bs-body-font-size: 0.9375rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #747579;
-  --bs-body-color-rgb: 116, 117, 121;
+  --bs-body-color: #181A1C; /* was #747579 */
+  --bs-body-color-rgb: 24, 26, 28; /* was 116, 117, 121 */
   --bs-body-bg: #fff;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-emphasis-color: #000;
@@ -95,7 +95,7 @@
   --bs-tertiary-color-rgb: 116, 117, 121;
   --bs-tertiary-bg: #f5f7f9;
   --bs-tertiary-bg-rgb: 245, 247, 249;
-  --bs-heading-color: var(--bs-gray-800);
+  --bs-heading-color: #01426A; /* Mac Blue; was var(--bs-gray-800) */
   --bs-link-color: #01426A; /* Mac Blue; was #71C5E8 */
   --bs-link-color-rgb: 1, 66, 106; /* Mac Blue; was 93, 198, 233 */
   --bs-link-decoration: underline;
@@ -130,8 +130,8 @@
 
 [data-bs-theme=dark] {
   color-scheme: dark;
-  --bs-body-color: #dee2e6;
-  --bs-body-color-rgb: 222, 226, 230;
+  --bs-body-color: #A5ADAF; /* Mac Light Gray; was #dee2e6 */
+  --bs-body-color-rgb: 165, 173, 175; /* was 222, 226, 230 */
   --bs-body-bg: #212529;
   --bs-body-bg-rgb: 33, 37, 41;
   --bs-emphasis-color: #fff;
@@ -22472,8 +22472,8 @@ html[dir=rtl] .choices__input {
   --bs-gray-900: #fff;
   --bs-body-bg: #222529;
   --bs-body-bg-rgb: #222529;
-  --bs-body-color: #a1a1a8;
-  --bs-body-color-rgb: rgba(176, 176, 184);
+  --bs-body-color: #A5ADAF; /* Mac Light Gray; was #a1a1a8 */
+  --bs-body-color-rgb: 165, 173, 175; /* was rgba(176, 176, 184) */
   --bs-border-color: rgba(255, 255, 255, 0.07);
   --bs-mode:#1b1e21;
   --bs-heading-color: var(--bs-gray-900);
@@ -22487,6 +22487,10 @@ html[dir=rtl] .choices__input {
 }
 [data-bs-theme=dark] .nav {
   --bs-nav-link-color: var(--bs-gray-600);
+  --bs-nav-item-color: #dde0e3; /* keep plain li text light; prevents shift to gray-300 (#3e3e40) */
+}
+[data-bs-theme=dark] .nav-item {
+  color: var(--bs-nav-item-color);
 }
 [data-bs-theme=dark] .nav-category {
   border-bottom: solid 1px var(--bs-light);
