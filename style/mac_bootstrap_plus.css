@@ -45,10 +45,12 @@ span.ui-icon.ui-icon-circle-triangle-w, span.ui-icon.ui-icon-circle-triangle-e {
 .nav-item {
     color: var(--bs-gray-300) !important;
 }
+
 [data-bs-theme=dark] .nav-item {
     color: #dde0e3 !important;
 }
 
+/* Dark mode overrides for mac-blue */
 [data-bs-theme=dark] .text-blue {
     color: white !important;
 }
