@@ -49,6 +49,10 @@ span.ui-icon.ui-icon-circle-triangle-w, span.ui-icon.ui-icon-circle-triangle-e {
     color: #dde0e3 !important;
 }
 
+[data-bs-theme=dark] .text-blue {
+    color: white !important;
+}
+
 .lazy-img {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
